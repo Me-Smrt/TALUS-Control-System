@@ -3,7 +3,6 @@
 Welcome to my contribution to **TALUS**, a project of Tennessee Tech's [Autonomous Robotics Club (ARC)](https://www.instagram.com/tntecharc/)! This repository showcases my independently developed hardware, software, and simulation work for the project.
 
 In the interest of transparency, much of the documentation was written with the help of AI (credit where it's due! 🤣), but the engineering work represented here is my own.
-
 I hope you find the project interesting as you explore the repository! I also plan to add photos of TALUS and demonstrations of the simulations as the project progresses.
 
 ---
@@ -69,6 +68,8 @@ See [Project Status](PROJECT_STATUS.md) for what remains to be tested.
 1. Choose a subsystem from the table above and follow its component README for installation and configuration. Components may require separate Python environments or PlatformIO toolchains.
 2. Obtain the AI model weights, vendor CAD references, and Blender head assets listed in the relevant component README. These are **not** included in this source-only repository.
 3. For AUX console testing, see [`Software/Auxiliary Processor R&D/README.md`](Software/Auxiliary%20Processor%20R%26D/README.md); for Pi CV and Blender simulation, see [`Software/CV R&D/README.md`](Software/CV%20R%26D/README.md).
+
+4. For the CCB and RCB KiCad projects, see the [hardware design README](Design/README.md) for project files, footprint libraries, and optional 3D models.
 
 ### 3D Component Models
 

@@ -43,11 +43,12 @@ A subsystem should be described as **hardware-validated** only when correspondin
 
 ## Component documentation
 
-- [Software overview](../Software/README.md)
-- [AUX setup and architecture](../Software/Auxiliary%20Processor%20R%26D/README.md)
-- [Computer vision, IK, and Blender simulation](../Software/CV%20R%26D/README.md)
-- [Raspberry Pi control](../Software/Raspberry%20PI%205/README.md)
-- [Dashboard](../Software/Dashboard/README.md)
-- [Hardware design licensing](../Design/LICENSING.md)
+- [Software overview](Software/README.md)
+- [AUX setup and architecture](Software/Auxiliary%20Processor%20R%26D/README.md)
+- [Computer vision, IK, and Blender simulation](Software/CV%20R%26D/README.md)
+- [Raspberry Pi control](Software/Raspberry%20PI%205/README.md)
+- [Dashboard](Software/Dashboard/README.md)
+- [KiCad hardware design and setup](Design/README.md)
+- [Hardware design licensing](Design/LICENSING.md)
 
-For the project's original engineering contributions and development predating this Git repository, see [Authorship](../AUTHORSHIP.md).
+For the project's original engineering contributions and development predating this Git repository, see [Authorship](AUTHORSHIP.md).
