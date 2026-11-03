@@ -1,0 +1,25 @@
+[Unit]
+Description=Automaton Raspberry Pi perception and state service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=automaton
+Group=automaton
+WorkingDirectory=/opt/automaton/cv
+Environment=PYTHONUNBUFFERED=1
+# For LAN/Jetson access, place AUTOMATON_API_TOKEN in an EnvironmentFile with
+# restrictive permissions and set control_api.bind_host=0.0.0.0 in config.
+EnvironmentFile=-/etc/automaton/perception.env
+ExecStart=/opt/automaton/cv/.venv/bin/python /opt/automaton/cv/main.py --no-preview --no-bridge
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/automaton/cv/logs /opt/automaton/cv/models
+
+[Install]
+WantedBy=multi-user.target

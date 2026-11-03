@@ -1,0 +1,131 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2712", "brcm,bcm2835";
+
+    fragment@0 {
+        target = <&spidev0>;
+        __overlay__ { status = "disabled"; };
+    };
+
+    fragment@1 {
+        target = <&spidev1>;
+        __overlay__ { status = "disabled"; };
+    };
+
+    fragment@2 {
+        target-path = "/";
+        __overlay__ {
+            automaton_can_osc: automaton-can-osc {
+                compatible = "fixed-clock";
+                #clock-cells = <0>;
+                clock-frequency = <20000000>;
+            };
+        };
+    };
+
+    fragment@3 {
+        target = <&spi0>;
+        __overlay__ {
+            status = "okay";
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            /*
+             * Pi 5/RP1 SPI uses GPIO chip selects. These are the exact CCB nets:
+             * CS0..7 = BCM 8,7,4,17,27,22,23,24.
+             * The active-low flag is 1 (GPIO_ACTIVE_LOW).
+             */
+            num-cs = <8>;
+            cs-gpios = <&gpio 8 1>,
+                       <&gpio 7 1>,
+                       <&gpio 4 1>,
+                       <&gpio 17 1>,
+                       <&gpio 27 1>,
+                       <&gpio 22 1>,
+                       <&gpio 23 1>,
+                       <&gpio 24 1>;
+
+            automaton_can0: can@0 {
+                compatible = "microchip,mcp25625";
+                reg = <0>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <25 8>; /* IRQ_TYPE_LEVEL_LOW; MCP25625 INT is active-low until flags are cleared */
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can1: can@1 {
+                compatible = "microchip,mcp25625";
+                reg = <1>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <5 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can2: can@2 {
+                compatible = "microchip,mcp25625";
+                reg = <2>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <6 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can3: can@3 {
+                compatible = "microchip,mcp25625";
+                reg = <3>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <12 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can4: can@4 {
+                compatible = "microchip,mcp25625";
+                reg = <4>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <13 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can5: can@5 {
+                compatible = "microchip,mcp25625";
+                reg = <5>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <19 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can6: can@6 {
+                compatible = "microchip,mcp25625";
+                reg = <6>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <16 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+
+            automaton_can7: can@7 {
+                compatible = "microchip,mcp25625";
+                reg = <7>;
+                spi-max-frequency = <8000000>;
+                interrupt-parent = <&gpio>;
+                interrupts = <26 8>;
+                clocks = <&automaton_can_osc>;
+                status = "okay";
+            };
+        };
+    };
+};

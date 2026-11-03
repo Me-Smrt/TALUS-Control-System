@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Remote Control Module") (type "KiCad") (uri "${KIPRJMOD}/Remote Control Module.pretty") (options "") (descr ""))
+)

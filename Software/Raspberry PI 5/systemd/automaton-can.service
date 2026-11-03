@@ -1,0 +1,14 @@
+[Unit]
+Description=Configure Automaton SocketCAN channels
+After=network-pre.target
+Before=automaton.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/automaton/Raspberry PI 5
+Environment=PYTHONPATH=/opt/automaton/Raspberry PI 5
+ExecStart=/usr/bin/python3 /opt/automaton/Raspberry PI 5/scripts/configure_can.py --config /etc/automaton/automaton.toml
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

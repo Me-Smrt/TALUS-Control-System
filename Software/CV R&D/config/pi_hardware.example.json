@@ -1,0 +1,132 @@
+{
+  "camera": {
+    "index": 0,
+    "width": 640,
+    "height": 400,
+    "fps": 12,
+    "mirror_preview": true,
+    "input_mirrored": false,
+    "id": "aurora",
+    "label": "Primary camera / Aurora930 Pro (planned)",
+    "planned_hardware": "Hiwonder Aurora930 Pro RGB-D",
+    "role": "tracking_and_depth",
+    "capabilities": [
+      "rgb",
+      "depth_planned",
+      "ir_planned"
+    ]
+  },
+  "mediapipe": {
+    "model_path": "models/holistic_landmarker.task",
+    "model_url": "https://storage.googleapis.com/mediapipe-models/holistic_landmarker/holistic_landmarker/float16/1/holistic_landmarker.task",
+    "min_face_detection_confidence": 0.5,
+    "min_face_landmarks_confidence": 0.5,
+    "min_pose_detection_confidence": 0.5,
+    "min_pose_landmarks_confidence": 0.5,
+    "min_hand_landmarks_confidence": 0.5,
+    "output_face_blendshapes": true
+  },
+  "retarget": {
+    "mirror_motion": false,
+    "arm_elbow_weight": 0.35,
+    "arm_max_iterations": 35,
+    "arm_damping": 0.035,
+    "arm_step_limit_rad": 0.12,
+    "head_neutral_calibration_frames": 30,
+    "gaze_deadzone": 0.02,
+    "gaze_pan_gain": 1.6,
+    "gaze_tilt_gain": 1.4,
+    "left_eye_pan_sign": 1.0,
+    "right_eye_pan_sign": 1.0,
+    "left_eye_tilt_sign": 1.0,
+    "right_eye_tilt_sign": 1.0,
+    "apply_torso": true,
+    "apply_arms": true,
+    "apply_hands": true,
+    "apply_face": true,
+    "apply_legs": false,
+    "apply_wrists": true,
+    "wrist_neutral_calibration_frames": 30,
+    "left_wrist_rotation_sign": 1.0,
+    "right_wrist_rotation_sign": 1.0,
+    "left_wrist_bend_sign": 1.0,
+    "right_wrist_bend_sign": 1.0,
+    "torso_yaw_gain": 1.0,
+    "torso_bend_gain": 1.0,
+    "torso_yaw_sign": 1.0,
+    "torso_bend_sign": -1.0,
+    "torso_deadzone_rad": 0.017453292519943295,
+    "torso_bend_semantics": "Maps human lateral side lean onto current topStom joint; tracked sagittal lean is not applied."
+  },
+  "smoothing": {
+    "min_cutoff": 1.2,
+    "beta": 0.06,
+    "derivative_cutoff": 1.0
+  },
+  "bridge": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 8765,
+    "max_datagram_bytes": 60000
+  },
+  "recording": {
+    "enabled": false,
+    "path": "logs/session.jsonl"
+  },
+  "simulation_motion": {
+    "enabled": true,
+    "speed_scale": 1.0,
+    "default_max_velocity_rad_s": 0.7853981634,
+    "default_max_acceleration_rad_s2": 2.0943951024,
+    "normalized_max_velocity_s": 0.5,
+    "normalized_max_acceleration_s2": 2.0,
+    "note": "Simulation-only trapezoidal shaping. Raw CV/IK targets remain unchanged under frame.robot; Blender consumes frame.simulation."
+  },
+  "additional_cameras": [
+    {
+      "id": "eye",
+      "label": "Eye camera (planned)",
+      "planned_hardware": "Compact USB eye camera",
+      "role": "eye_view",
+      "enabled": true,
+      "index": 1,
+      "width": 640,
+      "height": 480,
+      "fps": 30,
+      "reconnect_s": 2.0,
+      "capabilities": [
+        "rgb"
+      ]
+    }
+  ],
+  "frame_service": {
+    "processed_snapshots": true,
+    "note": "Raw and processed frames remain on the Pi; JPEG is encoded only when requested by the dashboard or auxiliary node."
+  },
+  "control_api": {
+    "enabled": true,
+    "bind_host": "0.0.0.0",
+    "port": 8766,
+    "jpeg_quality": 85,
+    "token_env": "AUTOMATON_API_TOKEN",
+    "allow_unauthenticated_loopback": true,
+    "access_log": false,
+    "note": "Pi hardware example. Requires AUTOMATON_API_TOKEN before startup because API is LAN-visible."
+  },
+  "audio": {
+    "input_label": "USB microphone (planned)",
+    "output_label": "USB speaker (planned)",
+    "input_name_contains": "",
+    "output_name_contains": "",
+    "note": "Pi owns physical audio devices. Transport/clip APIs are intentionally deferred to the auxiliary STT/TTS R&D pass."
+  },
+  "auxiliary": {
+    "planned_type": "Jetson Orin Nano",
+    "transport": "Gigabit Ethernet",
+    "authority": "high_level_perception_and_intent_only"
+  },
+  "state": {
+    "health_period_s": 1.0,
+    "audio_probe_period_s": 10.0
+  }
+}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Robot | ARC Robotics{% endblock %}
+
+{% block header_actions %}
+{% include "_operator_actions.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-shell" data-robot-dashboard>
+    {% include "_dashboard_nav.html" %}
+
+    <div class="dashboard-main">
+        <section class="dashboard-title circuit-reactive" data-circuit-reactive>
+            <div>
+                <p class="eyebrow">ROBOT</p>
+                <h1>Robot</h1>
+                <p>Detailed perception, motion, I/O, and hardware-state view.</p>
+            </div>
+        </section>
+
+        <section class="panel-grid panel-grid--2 circuit-reactive" data-circuit-reactive>
+            <article class="panel" id="telemetry">
+                <div class="panel__header"><h2>Safety & Motion</h2><span class="panel__badge" data-ui="safety-badge">UNVERIFIED</span></div>
+                <div class="status-list status-list--dense">
+                    <div><span>Armed</span><strong class="mono" data-ui="armed">—</strong></div>
+                    <div><span>E-stop</span><strong class="mono" data-ui="estop">—</strong></div>
+                    <div><span>Global servo allow</span><strong class="mono" data-ui="global-allow">—</strong></div>
+                    <div><span>Motion state</span><strong class="mono" data-ui="motion-status">—</strong></div>
+                    <div><span>Simulation profiling</span><strong class="mono" data-ui="motion-profile">—</strong></div>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel__header"><h2>Perception</h2><span class="panel__badge" data-ui="tracking-camera">CAM // —</span></div>
+                <div class="status-list status-list--dense">
+                    <div><span>Face</span><strong class="mono" data-ui="face-track">—</strong></div>
+                    <div><span>Body pose</span><strong class="mono" data-ui="body-track">—</strong></div>
+                    <div><span>Left hand</span><strong class="mono" data-ui="left-hand-track">—</strong></div>
+                    <div><span>Right hand</span><strong class="mono" data-ui="right-hand-track">—</strong></div>
+                    <div><span>Frame freshness</span><strong class="mono" data-ui="perception-age">—</strong></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel-grid panel-grid--2 circuit-reactive dashboard-section-gap" data-circuit-reactive>
+            <article class="panel vision-panel">
+                <div class="panel__header vision-panel__header">
+                    <div><h2>Camera Inspection</h2><span class="panel__subtext">Raw / processed Pi snapshots</span></div>
+                    <div class="vision-toolbar">
+                        <div class="segmented-control segmented-control--cameras" data-camera-selector aria-label="Camera selection" role="group"></div>
+                        <div class="segmented-control segmented-control--view" data-view-selector aria-label="Frame processing view" role="group">
+                            <button type="button" data-frame-view="processed" class="is-active">Processed</button>
+                            <button type="button" data-frame-view="raw">Raw</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="vision-frame vision-frame--compact">
+                    <img data-vision-image alt="Latest robot camera snapshot" decoding="async" draggable="false" hidden>
+                    <div class="vision-frame__empty" data-vision-empty><span class="vision-frame__glyph">◎</span><strong>Waiting for frame</strong></div>
+                    <div class="vision-frame__footer mono"><span data-ui="camera-label">CAMERA // —</span><span data-ui="frame-age">AGE // —</span></div>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel__header"><h2>Pi I/O</h2></div>
+                <div class="status-list status-list--dense">
+                    <div><span>CPU</span><strong class="mono" data-ui="cpu">—</strong></div>
+                    <div><span>Memory</span><strong class="mono" data-ui="memory">—</strong></div>
+                    <div><span>CPU temperature</span><strong class="mono" data-ui="temperature">—</strong></div>
+                    <div><span>Microphone</span><strong class="mono" data-ui="microphone">—</strong></div>
+                    <div><span>Speaker</span><strong class="mono" data-ui="speaker">—</strong></div>
+                    <div><span>Auxiliary link</span><strong class="mono" data-ui="aux-link">—</strong></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel-grid panel-grid--2 circuit-reactive dashboard-section-gap" data-circuit-reactive>
+            <article class="panel">
+                <div class="panel__header"><h2>World State</h2><span class="panel__badge" data-ui="world-status">UNAVAILABLE</span></div>
+                <div class="status-list status-list--dense">
+                    <div><span>Anonymous people tracked</span><strong class="mono" data-ui="world-people">—</strong></div>
+                    <div><span>Current objects / people</span><strong class="mono" data-ui="world-tracks">—</strong></div>
+                    <div><span>Last observation age</span><strong class="mono" data-ui="world-age">—</strong></div>
+                    <div><span>Detector inference</span><strong class="mono" data-ui="world-inference">—</strong></div>
+                    <div><span>Pi primary pose</span><strong class="mono" data-ui="pi-world-pose">—</strong></div>
+                </div>
+                <div class="node-table" data-world-track-list role="status" aria-live="polite"></div>
+                <p class="panel__subtext">Anonymous image-space tracks. Last-seen objects are historical observations, not confirmed current locations.</p>
+            </article>
+            <article class="panel">
+                <div class="panel__header"><h2>Collision / Simulation</h2><span class="panel__badge" data-ui="collision-status">UNVERIFIED</span></div>
+                <div class="status-list status-list--dense">
+                    <div><span>IK inter-arm clearance</span><strong class="mono" data-ui="collision-clearance">—</strong></div>
+                    <div><span>Simulation clearance</span><strong class="mono" data-ui="simulation-clearance">—</strong></div>
+                    <div><span>Inter-arm path</span><strong class="mono" data-ui="collision-path">—</strong></div>
+                    <div><span>Gesture</span><strong class="mono" data-ui="simulation-gesture">—</strong></div>
+                </div>
+                <p class="panel__subtext">Conservative capsule collision preview only; not a certified hardware interlock.</p>
+            </article>
+        </section>
+
+        <section class="panel circuit-reactive dashboard-section-gap" data-circuit-reactive id="events">
+            <div class="panel__header"><h2>Control Nodes</h2><span class="panel__subtext">Physical identity/channel fields populate when the hardware runtime is connected.</span></div>
+            <div class="node-table" data-node-table></div>
+        </section>
+    </div>
+</div>
+{% endblock %}

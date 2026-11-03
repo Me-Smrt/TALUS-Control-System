@@ -1,0 +1,51 @@
+{
+  "id": "molex_43860_0006",
+  "name": "Molex 43860-0006 Shielded Modular Jack 6P4C",
+  "category": "connector",
+  "family": "Molex 43860 Modular Jack",
+  "manufacturer": "Molex",
+  "mpn_pattern": "0438600006",
+  "description": "Right-angle side-entry inverted modular jack, 6 positions / 4 loaded contacts, through-hole, shielded, with PCB locators and all panel grounding tabs.",
+  "parameters": {
+    "positions": 6,
+    "contacts": 4,
+    "pitch_mm": 1.02,
+    "mounting": "THT",
+    "orientation": "right-angle",
+    "edge_face": "-y",
+    "shielded": true,
+    "pcb_locator": true,
+    "pcb_retention": true,
+    "pcb_thickness_mm": 1.60,
+    "body_width_mm": 16.38,
+    "body_depth_mm": 15.75,
+    "body_height_mm": 13.53
+  },
+  "files": {
+    "footprint": "molex_43860_0006.kicad_mod",
+    "symbol": "molex_43860_0006.kicad_sym"
+  },
+  "formats": [
+    "kicad_mod",
+    "kicad_sym"
+  ],
+  "tier": "verified-2d",
+  "datasheet": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/438/43860/438600002_sd.pdf",
+  "dimensions_source": "Molex Product Sales Drawing SD-43860-001 Rev J, sheet 2 of 5, assembly 43860-0006: PCB layout and dimension table. Used signal hole Ø0.89±0.08 mm, .040 in / 1.02 mm pitch, .120 in / 3.05 mm 4-contact span, .190 in / 4.83 mm centered 4-contact offset, PCB locator holes Ø3.25±0.08 mm at 12.70±0.10 mm centers, PCB ground-tab holes Ø1.57±0.08 mm, front-to-locator datum .208 in / 5.28 mm, body 16.38 x 15.75 x 13.53 mm. Molex product page confirms 6/4, THT, shielded, right-angle, 1.60 mm PCB thickness.",
+  "verified": true,
+  "license": "CC-BY-4.0",
+  "generated_by": "OpenAI GPT-5.6 Sol; original datasheet-derived drawing",
+  "keywords": [
+    "molex",
+    "43860",
+    "0438600006",
+    "43860-0006",
+    "modular jack",
+    "6p4c",
+    "rj11",
+    "rj14",
+    "shielded",
+    "right-angle",
+    "through-hole"
+  ]
+}

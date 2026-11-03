@@ -1,0 +1,16 @@
+[Unit]
+Description=Automaton Auxiliary Cognition Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/automaton/aux
+EnvironmentFile=-/etc/automaton/aux.env
+ExecStart=/opt/automaton/aux/.venv/bin/python main.py
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

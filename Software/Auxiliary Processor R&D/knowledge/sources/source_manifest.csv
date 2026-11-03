@@ -1,0 +1,40 @@
+source_id,title,category,source_url,snapshot_date,file
+ttu.about.overview,About Tennessee Tech,about,https://www.tntech.edu/about/,2026-09-29,knowledge/sources/about_overview.md
+ttu.about.mission,Mission and Vision,about,https://www.tntech.edu/about/mission.php,2026-09-29,knowledge/sources/mission_vision.md
+ttu.about.facts,Facts and Figures,about,https://www.tntech.edu/about/facts.php,2026-09-29,knowledge/sources/facts_figures.md
+ttu.maps,Campus Maps and General Contacts,campus,https://www.tntech.edu/maps/index.php,2026-09-29,knowledge/sources/maps_contacts.md
+ttu.academics.overview,Academics Overview,academics,https://www.tntech.edu/academics/,2026-09-29,knowledge/sources/academics_overview.md
+ttu.academics.colleges,Colleges and Schools,academics,https://www.tntech.edu/academics/colleges-schools.php,2026-09-29,knowledge/sources/colleges_schools.md
+ttu.academics.majors,Majors and Academic Catalogs,academics,https://undergrad.catalog.tntech.edu/ugrequirements/majors,2026-09-29,knowledge/sources/majors_catalog.md
+ttu.calendar.2026-2027,2026-2027 Academic Calendar,academics,https://www.tntech.edu/academics/calendar.php,2026-09-29,knowledge/sources/academic_calendar.md
+ttu.admissions.undergrad,Undergraduate Admissions and Application,admissions,https://www.tntech.edu/admissions/apply/,2026-09-29,knowledge/sources/undergrad_admissions.md
+ttu.admissions.international,International Undergraduate Admissions,admissions,https://www.tntech.edu/admissions/international/application.php,2026-09-29,knowledge/sources/international_admissions.md
+ttu.admissions.graduate,Graduate Admissions,admissions,https://www.tntech.edu/graduatestudies/admissions/apply.php,2026-09-29,knowledge/sources/graduate_admissions.md
+ttu.bursar.tuition.2026-2027,2026-2027 Tuition and Fee Overview,costs,https://www.tntech.edu/bursar/tuition/index.php,2026-09-29,knowledge/sources/tuition_fees.md
+ttu.financialaid.coa.2026-2027,2026-2027 Cost of Attendance,costs,https://www.tntech.edu/financialaid/cost.php,2026-09-29,knowledge/sources/cost_of_attendance.md
+ttu.financialaid.overview,Financial Aid Overview,aid,https://www.tntech.edu/financialaid/,2026-09-29,knowledge/sources/financial_aid.md
+ttu.financialaid.fafsa,FAFSA Information,aid,https://www.tntech.edu/financialaid/process/fafsa.php,2026-09-29,knowledge/sources/fafsa.md
+ttu.scholarships.2027-2028,Scholarships,aid,https://www.tntech.edu/scholarships/,2026-09-29,knowledge/sources/scholarships.md
+ttu.housing.overview,University Housing and Residential Life,student_life,https://www.tntech.edu/reslife/,2026-09-29,knowledge/sources/housing.md
+ttu.housing.applications.2027,Housing Applications and Timing,student_life,https://www.tntech.edu/reslife/applications.php,2026-09-29,knowledge/sources/housing_applications.md
+ttu.dining.mealplans.2026-2027,2026-2027 Meal Plans,student_life,https://www.tntech.edu/aux/dining/meal-plans.php,2026-09-29,knowledge/sources/dining.md
+ttu.parking.2026,Parking and Transportation,campus,https://www.tntech.edu/parking/campus-parking.php,2026-09-29,knowledge/sources/parking.md
+ttu.registrar,"Registrar: Records, Registration and Graduation",academics,https://www.tntech.edu/records/,2026-09-29,knowledge/sources/registrar.md
+ttu.studentaffairs,Student Affairs,student_services,https://www.tntech.edu/studentaffairs/,2026-09-29,knowledge/sources/student_affairs.md
+ttu.ssc.contacts,Campus Support Contacts,student_services,https://www.tntech.edu/ssc/contacts.php,2026-09-29,knowledge/sources/campus_contacts.md
+ttu.library.tutoring,Volpe Library Learning Center Tutoring,student_services,https://www.tntech.edu/library/learning-center.php,2026-09-29,knowledge/sources/tutoring.md
+ttu.career,Center for Career Development,student_services,https://www.tntech.edu/career/,2026-09-29,knowledge/sources/career.md
+ttu.counseling,Counseling and Mental Health Wellness,health_safety,https://www.tntech.edu/counsel/,2026-09-29,knowledge/sources/counseling.md
+ttu.healthservices,Health Services,health_safety,https://www.tntech.edu/healthservices/,2026-09-29,knowledge/sources/health_services.md
+ttu.aec,Accessible Education Center,student_services,https://www.tntech.edu/disability/index.php,2026-09-29,knowledge/sources/accessible_education.md
+ttu.police,University Police and Emergency Information,health_safety,https://www.tntech.edu/police/,2026-09-29,knowledge/sources/university_police.md
+ttu.studentorgs,Student Organizations,student_life,https://www.tntech.edu/engagement/orgs/organizations.php,2026-09-29,knowledge/sources/student_orgs.md
+ttu.recreation,Campus Recreation,student_life,https://www.tntech.edu/recreation/,2026-09-29,knowledge/sources/campus_recreation.md
+ttu.library.hours,Volpe Library Hours and Services,student_services,https://www.tntech.edu/library/hours.php,2026-09-29,knowledge/sources/library_hours.md
+ttu.its.techexpress,TechExpress and ITS Help,technology,https://services.tntech.edu/TDClient/1878/Portal/KB/Article/130791/TechExpress,2026-09-29,knowledge/sources/techexpress.md
+ttu.canvas.students.2026,Canvas Learning Management System,technology,https://www.tntech.edu/citl/canvas/student.php,2026-09-29,knowledge/sources/canvas.md
+ttu.navigate360.students,Navigate360 Student,technology,https://www.tntech.edu/navigate/student.php,2026-09-29,knowledge/sources/navigate360.md
+ttu.studenthandbook,Student Handbook,policies,https://www.tntech.edu/handbooks/student/,2026-09-29,knowledge/sources/student_handbook.md
+ttu.policies,Policy Central,policies,https://www.tntech.edu/policies/,2026-09-29,knowledge/sources/policy_central.md
+ttu.accreditation,SACSCOC Accreditation,about,https://www.tntech.edu/sacscoc/,2026-09-29,knowledge/sources/accreditation.md
+ttu.az.index,Tennessee Tech Public A-Z Index,directory,https://www.tntech.edu/a-z.php,2026-09-29,knowledge/sources/a_z_index.md

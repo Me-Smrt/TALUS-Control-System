@@ -1,0 +1,1038 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "1a99b628-e515-4c1d-b2d0-d6139930fb29")
+	(paper "A4")
+	(title_block
+		(title "08 Remote Interfaces")
+		(date "2026-09-17")
+		(rev "1.0")
+	)
+	(lib_symbols)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 52.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "47542734-86a8-4bc5-b22b-0c95966ea14f")
+	)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 140.97 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "5faf20c3-60dd-4d0a-9747-30e293da8a1b")
+	)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 158.75 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "6896c17a-2f42-4d3e-9929-5ad18b802069")
+	)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 69.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "8ee115a4-0b01-4f9c-b589-96ab08a2e303")
+	)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "b32615b7-5e97-4022-bbfb-852731e97ef1")
+	)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "f730d6e3-f878-41e3-a927-4948126b5fbc")
+	)
+	(label "GLOBAL_SERVO_ALLOW_12V"
+		(at 39.37 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "fb7a9566-4061-4d22-b5cc-11f699a23746")
+	)
+	(hierarchical_label "CANH_5"
+		(shape bidirectional)
+		(at 39.37 118.11 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1007d696-c1a9-4991-85ed-cbd93bb6da56")
+	)
+	(hierarchical_label "REMOTE_VBUS_5"
+		(shape input)
+		(at 39.37 125.73 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3d295b92-2ac1-44fd-bd65-05b3dc08a133")
+	)
+	(hierarchical_label "CANL_4"
+		(shape bidirectional)
+		(at 39.37 102.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4498bf27-3ad9-488b-885c-fd14ed7941b3")
+	)
+	(hierarchical_label "REMOTE_VBUS_6"
+		(shape input)
+		(at 39.37 143.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "469279e8-7c04-4562-b8b4-fb61d564d33a")
+	)
+	(hierarchical_label "CANH_2"
+		(shape bidirectional)
+		(at 39.37 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6014b0d9-a0bf-4c12-86a7-0b6a1a175afa")
+	)
+	(hierarchical_label "CANL_3"
+		(shape bidirectional)
+		(at 39.37 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6ae28ab1-6b48-4a2d-b807-26df52ef2d47")
+	)
+	(hierarchical_label "CANL_1"
+		(shape bidirectional)
+		(at 39.37 49.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6ea55bcb-74a7-49a3-8c80-6faaecd3c3f4")
+	)
+	(hierarchical_label "REMOTE_VBUS_2"
+		(shape input)
+		(at 39.37 72.39 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "716c9a7f-67ca-4c47-bbbb-6920b9f0c06d")
+	)
+	(hierarchical_label "CANH_0"
+		(shape bidirectional)
+		(at 39.37 29.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7857e603-0581-494b-a3ba-29a807ce942c")
+	)
+	(hierarchical_label "GLOBAL_SERVO_ALLOW_12V"
+		(shape input)
+		(at 39.37 34.29 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "92dcaece-6bb0-4332-add7-1c0d26813f7b")
+	)
+	(hierarchical_label "CANL_2"
+		(shape bidirectional)
+		(at 39.37 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "97f4056e-40d1-48d9-b471-91fbe139d509")
+	)
+	(hierarchical_label "CANL_7"
+		(shape bidirectional)
+		(at 39.37 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a1cbfb27-2dd7-4080-9691-5832b8ec5c10")
+	)
+	(hierarchical_label "CANH_6"
+		(shape bidirectional)
+		(at 39.37 135.89 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b2e054eb-33c6-4c44-9a1f-542d3bc7f12b")
+	)
+	(hierarchical_label "CANH_1"
+		(shape bidirectional)
+		(at 39.37 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bd4c2fff-a66d-49bb-97f4-486915a8cacc")
+	)
+	(hierarchical_label "REMOTE_VBUS_0"
+		(shape input)
+		(at 39.37 36.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bef9713b-f794-42e3-acbe-750c15c992f7")
+	)
+	(hierarchical_label "REMOTE_VBUS_4"
+		(shape input)
+		(at 39.37 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c0f5d007-e6c2-44ec-8361-d52d309d7071")
+	)
+	(hierarchical_label "REMOTE_VBUS_7"
+		(shape input)
+		(at 39.37 161.29 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c2104be6-44da-4043-9669-77bd2b266e14")
+	)
+	(hierarchical_label "CANL_5"
+		(shape bidirectional)
+		(at 39.37 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d556d7f7-e4a3-42cd-994b-ae7074e1369d")
+	)
+	(hierarchical_label "REMOTE_VBUS_3"
+		(shape input)
+		(at 39.37 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d56a6cb8-5c75-44bb-a975-0f4e670ea421")
+	)
+	(hierarchical_label "CANH_7"
+		(shape bidirectional)
+		(at 39.37 153.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dc0174f3-354d-4b23-9d5a-8f417c4e63d5")
+	)
+	(hierarchical_label "CANL_6"
+		(shape bidirectional)
+		(at 39.37 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dd6b53cc-689c-438c-bda5-504e81d2dd0b")
+	)
+	(hierarchical_label "REMOTE_VBUS_1"
+		(shape input)
+		(at 39.37 54.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e3e7b879-91d5-410c-8294-9655a7de5128")
+	)
+	(hierarchical_label "CANL_0"
+		(shape bidirectional)
+		(at 39.37 31.75 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f183fa58-d7dd-41f1-b1af-52d1327522e7")
+	)
+	(hierarchical_label "CANH_4"
+		(shape bidirectional)
+		(at 39.37 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f7785cc8-774a-4b02-a8d1-8644a1176fff")
+	)
+	(hierarchical_label "CANH_3"
+		(shape bidirectional)
+		(at 39.37 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fec16ccd-d05e-4bdf-9882-0f005c8dab21")
+	)
+	(sheet
+		(at 39.37 151.13)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "042502fd-1e26-4de5-9c31-f5bb9b54571d")
+		(property "Sheetname" "REMOTE_CH7"
+			(at 39.37 150.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 164.338 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 153.67 180)
+			(uuid "759217ad-ae50-43f6-8f23-bbe66e6119eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 156.21 180)
+			(uuid "64a56166-c2e3-4912-9f95-71efe5d7b478")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 158.75 180)
+			(uuid "67fedc03-3d5d-4566-b236-beed8f12c44b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 161.29 180)
+			(uuid "1a2943ae-0c54-4e95-88f2-e8e09ebc061f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "25")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 133.35)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "17527c36-aeed-4d34-aa64-253ac06c591f")
+		(property "Sheetname" "REMOTE_CH6"
+			(at 39.37 132.6384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 146.558 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 135.89 180)
+			(uuid "bbee3e91-4017-4dc2-81f8-2003a4fce5ff")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 138.43 180)
+			(uuid "d58f33f1-c1d9-4f6f-a06e-072ea6cf36f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 140.97 180)
+			(uuid "70b688f4-3f35-4e10-82ba-33887b4d62e6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 143.51 180)
+			(uuid "adf08ac1-275c-42c1-833d-52d2a66f263a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "24")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 26.67)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "17570af9-f8d7-4d26-a60a-0f8bb34e89de")
+		(property "Sheetname" "REMOTE_CH0"
+			(at 39.37 25.9584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 39.878 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 29.21 180)
+			(uuid "e2a36f73-265b-4fac-a3d8-2e4fa28e7e78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 31.75 180)
+			(uuid "87746380-53ce-4127-b8c4-0f78aa0670a4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 34.29 180)
+			(uuid "f07dbc8b-554d-47a4-aff7-e7d2d56f401e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 36.83 180)
+			(uuid "de147bac-9af7-4b03-a5ba-3b07bae9a309")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 80.01)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "4fde3a71-12a1-41c9-befe-2eca304de66a")
+		(property "Sheetname" "REMOTE_CH3"
+			(at 39.37 79.2984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 93.218 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 82.55 180)
+			(uuid "275ee8e5-ffe6-47a4-b5ed-6197c0981997")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 85.09 180)
+			(uuid "14d69a15-8ebc-4c12-8584-cf979ffb4692")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 87.63 180)
+			(uuid "e81805dc-357c-4c2b-871e-427774a2ed27")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 90.17 180)
+			(uuid "c24d6a87-c93d-4641-8b77-2991c0371366")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "21")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 97.79)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "77673fbc-2990-4763-8d93-ad5fdfeeaa83")
+		(property "Sheetname" "REMOTE_CH4"
+			(at 39.37 97.0784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 110.998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 100.33 180)
+			(uuid "e01f6332-a6b2-4e07-b831-54e12fe095ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 102.87 180)
+			(uuid "ed033d58-af05-4238-894f-c9838309be5b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 105.41 180)
+			(uuid "b7355444-f615-495a-81e6-c0d396aca871")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 107.95 180)
+			(uuid "59322e07-3afa-474e-a516-5ff95ebf440a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "22")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 62.23)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a90c0e8e-9bdc-4aec-a594-8cbaf1a68ec6")
+		(property "Sheetname" "REMOTE_CH2"
+			(at 39.37 61.5184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 75.438 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 64.77 180)
+			(uuid "6491c795-712a-4014-9042-9dfbbb834074")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 67.31 180)
+			(uuid "6f9296a6-0f6b-4fe5-8626-1ec7725f2f28")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 69.85 180)
+			(uuid "bebfeec4-38d0-4fbb-8ba1-df0d96c57f03")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 72.39 180)
+			(uuid "0aeba257-d930-4670-957f-2e058ab48cfd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 44.45)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c20d7b8a-95d6-440e-bbc0-ca0682fa543a")
+		(property "Sheetname" "REMOTE_CH1"
+			(at 39.37 43.7384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 57.658 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 46.99 180)
+			(uuid "6546c1c9-04cd-45a7-bc24-8e6ffff84750")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 49.53 180)
+			(uuid "07bf5a2e-3130-495f-b486-e99f09fefcdf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 52.07 180)
+			(uuid "5c2450cd-2ed4-4f86-9e96-2e3d65988cba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 54.61 180)
+			(uuid "b32adb89-8517-4165-b3ec-cffc47f98c7e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 115.57)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c60d1e2c-1659-462e-a847-b319b8472583")
+		(property "Sheetname" "REMOTE_CH5"
+			(at 39.37 114.8584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08a_Remote_Port.kicad_sch"
+			(at 39.37 128.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 39.37 118.11 180)
+			(uuid "a44ba0a4-5f7a-4f80-9e27-6bb3f70adb97")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 39.37 120.65 180)
+			(uuid "0cf5e6f8-c6d7-4bb6-a0ff-f7d0d9a10e3e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GLOBAL_ALLOW" input
+			(at 39.37 123.19 180)
+			(uuid "ad513a1d-1647-4484-a6a7-3985e32926b2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWR_IN" input
+			(at 39.37 125.73 180)
+			(uuid "22ef5162-aff5-4018-80b4-fb61cd7a2a2d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Central Control Module"
+				(path "/8f2909b2-903d-497d-9952-bc434d001d50/7903f46a-5333-47e0-9e57-962f73e45c74"
+					(page "23")
+				)
+			)
+		)
+	)
+)

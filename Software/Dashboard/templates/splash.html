@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}ARC Robotics{% endblock %}
+
+{% block nav %}
+<a href="#about">About</a>
+<a href="#systems">Systems</a>
+<a href="{{ url_for('help_page') }}">Help</a>
+{% endblock %}
+
+{% block header_actions %}
+<a class="button button--primary" href="{{ url_for('login') }}">Operator Login</a>
+{% endblock %}
+
+{% block content %}
+<section class="hero hero--splash circuit-reactive" data-circuit-reactive>
+    <div class="hero__content">
+        <p class="eyebrow">LOCAL ROBOTICS INTERFACE</p>
+        <h1>Distributed control.<br>Human-scale motion.</h1>
+        <p class="hero__lead">ARC is an InMoov-based robotics platform combining distributed CAN control, Raspberry Pi perception and kinematics, and a replaceable accelerated AI node.</p>
+
+        <div class="hero__actions"><a class="button button--primary" href="{{ url_for('login') }}">Operator Login</a></div>
+
+        <div class="layout-placeholder layout-placeholder--hero project-architecture-strip">
+            <span>PI 5 // CONTROL + PERCEPTION</span><span>CCB / RCB // SAFETY + ACTUATION</span><span>AUX // AI + SPEECH</span>
+        </div>
+    </div>
+
+    <div class="hero__visual technical-panel" aria-hidden="true">
+        <div class="radar-grid"></div>
+        <div class="rover-schematic">
+            <div class="rover-schematic__body"></div><div class="rover-schematic__mast"></div>
+            <div class="rover-schematic__wheel rover-schematic__wheel--a"></div><div class="rover-schematic__wheel rover-schematic__wheel--b"></div>
+            <div class="rover-schematic__wheel rover-schematic__wheel--c"></div><div class="rover-schematic__wheel rover-schematic__wheel--d"></div>
+            <span class="sensor sensor--1"></span><span class="sensor sensor--2"></span><span class="sensor sensor--3"></span>
+        </div>
+        <div class="technical-panel__label mono">AUTOMATON // SYSTEM ARCHITECTURE</div>
+    </div>
+</section>
+
+<section id="about" class="section circuit-reactive" data-circuit-reactive>
+    <div class="section-heading"><p class="eyebrow">PROJECT OVERVIEW</p><h2>One robot, layered authority.</h2></div>
+    <div class="card-grid card-grid--3">
+        <article class="info-card"><span class="info-card__index mono">01 / CONTROL</span><h3>Deterministic robotics</h3><p>Raspberry Pi orchestration, CCB supervision, point-to-point CAN, local RCB watchdogs, and explicit safety boundaries.</p></article>
+        <article class="info-card"><span class="info-card__index mono">02 / PERCEPTION</span><h3>Human motion tracking</h3><p>Face, gaze, eyelids, hands, body pose, retargeting, and InMoov inverse kinematics with Blender visualization.</p></article>
+        <article class="info-card"><span class="info-card__index mono">03 / COGNITION</span><h3>Replaceable AI node</h3><p>An auxiliary accelerator handles scene understanding, local AI, speech recognition, and speech synthesis without owning actuators.</p></article>
+    </div>
+</section>
+
+<section id="systems" class="section circuit-reactive" data-circuit-reactive>
+    <div class="section-heading section-heading--split"><div><p class="eyebrow">SYSTEMS</p><h2>Current development layers</h2></div></div>
+    <div class="feature-list">
+        <div class="feature-list__item"><span class="feature-list__icon">⌁</span><div><strong>Distributed motion control</strong><span>CCB Supervisor + eight isolated RCB channels.</span></div></div>
+        <div class="feature-list__item"><span class="feature-list__icon">◫</span><div><strong>Pi-owned vision</strong><span>Fast local tracking with on-demand raw/processed frame access.</span></div></div>
+        <div class="feature-list__item"><span class="feature-list__icon">◎</span><div><strong>Simulation first</strong><span>IK and servo-like dynamics visualized in the InMoov Blender model before hardware motion.</span></div></div>
+        <div class="feature-list__item"><span class="feature-list__icon">⚙</span><div><strong>Accelerated cognition</strong><span>Jetson Orin Nano-class auxiliary node planned for heavier models and speech.</span></div></div>
+    </div>
+</section>
+{% endblock %}

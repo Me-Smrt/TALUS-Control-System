@@ -1,0 +1,10 @@
+<div class="operator-actions">
+    <div class="operator-chip">
+        <span class="status-dot status-dot--ok"></span>
+        <span>{{ current_user.username }}</span>
+    </div>
+    <form class="logout-form" action="{{ url_for('logout') }}" method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button class="button button--ghost" type="submit">Log out</button>
+    </form>
+</div>

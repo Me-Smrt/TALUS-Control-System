@@ -1,0 +1,19 @@
+[can]
+# Deliberately configurable; this is not a frozen hardware property.
+bitrate = 500000
+restart_ms = 100
+# Resolve physical CCB channel N from sysfs spi0.N instead of assuming canN naming.
+auto_discover_by_spi = true
+# Fallback/manual names when auto-discovery is disabled.
+interfaces = ["can0", "can1", "can2", "can3", "can4", "can5", "can6", "can7"]
+
+[supervisor]
+serial_device = "/dev/serial0"
+baudrate = 115200
+heartbeat_gpio = 18
+heartbeat_period_s = 0.10
+keepalive_period_s = 0.10
+
+[paths]
+registry = "/var/lib/automaton/rcb_registry.json"
+log_directory = "/var/log/automaton"

@@ -1,0 +1,8 @@
+Flask>=3.1,<4
+python-dotenv>=1.0,<2
+Flask-Login>=0.6.3,<1
+Flask-WTF>=1.2.2,<2
+Flask-Limiter>=3.12,<5
+argon2-cffi>=23.1,<26
+waitress>=3.0,<4; platform_system == "Windows"
+gunicorn>=23,<24; platform_system != "Windows"

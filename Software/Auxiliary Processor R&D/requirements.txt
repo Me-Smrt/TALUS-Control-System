@@ -1,0 +1,30 @@
+# Automaton Auxiliary Processor R&D - unified Python dependencies
+# Runtime model weights are still installed manually under models/.
+#
+# Python 3.10-3.12 use stable PyPI Kokoro/Misaki releases.
+# The current PyPI releases reject Python 3.13, while the upstream source
+# projects have already raised their metadata ceiling to <3.14. For Python
+# 3.13 we therefore install those two packages from upstream source.
+
+pip>=25.0.1
+numpy>=1.26
+soundfile>=0.12
+langdetect>=1.0.9,<2
+psutil>=6,<8
+huggingface_hub>=0.28,<2
+
+# Speech-to-text / live audio
+faster-whisper>=1.1
+silero-vad>=6.0
+sounddevice>=0.5
+
+# Vision
+ultralytics>=8.3
+opencv-python>=4.10
+
+# TTS
+piper-tts>=1.8.0
+kokoro==0.9.4; python_version < "3.13"
+misaki[en,ja,zh]==0.9.4; python_version < "3.13"
+misaki[en,ja,zh] @ git+https://github.com/hexgrad/misaki.git@main ; python_version >= "3.13"
+kokoro @ git+https://github.com/hexgrad/kokoro.git@main ; python_version >= "3.13"

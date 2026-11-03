@@ -1,0 +1,372 @@
+{
+  "service": {
+    "version": "0.3.6",
+    "bind_host": "127.0.0.1",
+    "port": 8770,
+    "token_env": "AUTOMATON_AUX_API_TOKEN",
+    "allow_unauthenticated_loopback": true,
+    "access_log": false
+  },
+  "pi": {
+    "base_url": "http://127.0.0.1:8766",
+    "token_env": "AUTOMATON_API_TOKEN",
+    "timeout_s": 2.0,
+    "default_camera": "aurora",
+    "visual_camera_preference": [
+      "eye",
+      "aurora",
+      "tracking"
+    ],
+    "max_frame_age_ms": 700
+  },
+  "llm": {
+    "backend": "openai_compatible",
+    "base_url": "http://127.0.0.1:8000/v1",
+    "model": "Qwen/Qwen3.5-4B",
+    "api_key_env": "AUTOMATON_LLM_API_KEY",
+    "timeout_s": 60.0,
+    "temperature": 0.55,
+    "max_tokens": 1024,
+    "history_turns": 8,
+    "managed_server": {
+      "auto_start": true,
+      "executable": "auto",
+      "model_path": "models/qwen/Qwen3.5-4B-Q4_K_M.gguf",
+      "mmproj_path": "models/qwen/mmproj-Qwen3.5-4B-BF16.gguf",
+      "host": "127.0.0.1",
+      "port": 8000,
+      "context_size": 8192,
+      "parallel": 1,
+      "gpu_layers": "auto",
+      "flash_attention": "auto",
+      "startup_timeout_s": 120,
+      "log_path": "runtime/llama-server.log",
+      "extra_args": [],
+      "reasoning": "auto"
+    },
+    "system_prompt_file": "config/system_prompt.txt",
+    "profiles": {
+      "fast": {
+        "temperature": 0.55,
+        "max_tokens": 1024,
+        "timeout_s": 120,
+        "reasoning_effort": "none",
+        "auto_continue_on_length": 1
+      },
+      "deep": {
+        "temperature": 0.45,
+        "max_tokens": 4096,
+        "timeout_s": 360,
+        "reasoning_effort": "high",
+        "auto_continue_on_length": 1
+      }
+    }
+  },
+  "stt": {
+    "backend": "faster_whisper",
+    "model_path": "models/faster-whisper-large-v3-turbo",
+    "device": "auto",
+    "compute_type": "default",
+    "beam_size": 1,
+    "language": null,
+    "condition_on_previous_text": false,
+    "hotwords": [
+      "TALUS",
+      "Talus",
+      "Talos",
+      "Telus"
+    ]
+  },
+  "tts": {
+    "default_voice_id": "kokoro_af_heart",
+    "speed": 1.0,
+    "sample_text": "Hello. This is the current local voice for the Automaton project.",
+    "runtime_path": "runtime/tts_state.json",
+    "backends": {
+      "kokoro": {
+        "type": "kokoro_local",
+        "model_dir": "models/kokoro",
+        "device": "auto"
+      },
+      "piper": {
+        "type": "piper_cli",
+        "binary": "piper"
+      },
+      "mock": {
+        "type": "mock_tone"
+      }
+    },
+    "speech_text": {
+      "sanitize_markdown": true,
+      "speak_code": false,
+      "speak_urls": false,
+      "math_mode": "auto",
+      "math_max_chars": 420,
+      "note": "Display Markdown/LaTeX remains unchanged; the TTS copy strips formatting and verbalizes common equations. Complex structured math is referenced as displayed on screen."
+    },
+    "streaming": {
+      "enabled": true,
+      "prewarm": true,
+      "first_chunk_min_chars": 24,
+      "first_chunk_max_chars": 140,
+      "min_chunk_chars": 90,
+      "max_chunk_chars": 280,
+      "queue_size": 8,
+      "audio_queue_size": 3,
+      "trim_chunk_silence": true,
+      "leading_silence_ms": 20,
+      "trailing_silence_ms": 70,
+      "note": "Two-stage TTS pipeline with a short silent preroll at the beginning of each utterance to prevent Windows/audio-device fade-in from clipping the first phoneme.",
+      "first_preroll_ms": 180
+    }
+  },
+  "vision": {
+    "detector": {
+      "enabled": true,
+      "backend": "ultralytics",
+      "model_path": "models/yolo/yolo26n.pt",
+      "device": "auto",
+      "confidence": 0.35,
+      "max_detections": 30,
+      "image_size": 416
+    }
+  },
+  "engagement": {
+    "enabled": true,
+    "wake_phrases": [
+      "hey robot",
+      "okay robot",
+      "ok robot"
+    ],
+    "active_window_s": 25.0,
+    "idle_accept_score": 0.72,
+    "require_direct_address_when_idle": true,
+    "face_score": 0.18,
+    "head_attention_score": 0.28,
+    "gaze_attention_score": 0.36,
+    "wake_score": 1.0,
+    "head_yaw_limit_deg": 28.0,
+    "head_pitch_limit_deg": 24.0,
+    "gaze_pan_limit": 0.35,
+    "gaze_tilt_limit": 0.35,
+    "wake_name": "TALUS",
+    "wake_name_aliases": [
+      "talus",
+      "talos",
+      "talous",
+      "talis",
+      "thales",
+      "ataluz",
+      "telus"
+    ],
+    "wake_name_prefixes": [
+      "hey",
+      "okay",
+      "ok"
+    ],
+    "allow_bare_wake_name": true
+  },
+  "audio": {
+    "enabled": true,
+    "sample_rate": 16000,
+    "block_samples": 512,
+    "channels": 1,
+    "input_device": null,
+    "output_device": null,
+    "vad_threshold": 0.62,
+    "min_speech_ms": 250,
+    "end_silence_ms": 500,
+    "allow_barge_in_without_aec": false,
+    "default_conversation_language": "en",
+    "language_switch_min_confidence": 0.7,
+    "wake_only_max_tokens": 2,
+    "speech_gate": {
+      "enabled": true,
+      "min_duration_ms": 300,
+      "min_rms": 0.0025,
+      "max_no_speech_probability": 0.58,
+      "min_avg_logprob": -1.25,
+      "wake_only_min_language_confidence": 0.35,
+      "note": "Conservative speech-like audio gate after Silero VAD. It filters common non-speech/background-noise false triggers but is not speaker verification or anti-spoofing."
+    },
+    "aec": {
+      "enabled": true,
+      "backend": "adaptive_spectral",
+      "reference_delay_ms": 45.0,
+      "delay_search_max_ms": 220.0,
+      "delay_step_ms": 8.0,
+      "delay_update_interval_ms": 500,
+      "adaptation_alpha": 0.88,
+      "suppression": 0.95,
+      "min_reference_rms": 0.001,
+      "adapt_min_correlation": 0.12,
+      "max_filter_gain": 4.0,
+      "warmup_ms": 350,
+      "reference_retain_s": 8.0,
+      "barge_in": {
+        "enabled": true,
+        "confirm_ms": 240,
+        "pre_roll_ms": 450,
+        "min_residual_rms": 0.004,
+        "min_residual_to_mic_ratio": 0.22,
+        "min_erle_db": 2.0,
+        "near_end_low_correlation_override": 0.35,
+        "max_echo_only_correlation": 0.94,
+        "high_corr_min_residual_ratio": 0.5,
+        "note": "First-stage full-duplex barge-in. Tune these thresholds with the installed robot microphone/speaker/servo-noise environment."
+      },
+      "note": "Uses TALUS TTS PCM as a far-end reference. adaptive_spectral is the dependency-light R&D backend; the interface is intended to permit a later native WebRTC/Speex backend."
+    }
+  },
+  "conversation": {
+    "visual_keywords": {
+      "en": [
+        "what do you see",
+        "what am i holding",
+        "what is this",
+        "what's this",
+        "look at this",
+        "what color",
+        "can you see"
+      ],
+      "es": [
+        "qu\u00e9 ves",
+        "que ves",
+        "qu\u00e9 estoy sosteniendo",
+        "que estoy sosteniendo",
+        "qu\u00e9 es esto",
+        "que es esto"
+      ],
+      "fr": [
+        "que vois-tu",
+        "qu'est-ce que tu vois",
+        "qu'est-ce que je tiens"
+      ],
+      "de": [
+        "was siehst du",
+        "was halte ich",
+        "was ist das"
+      ],
+      "it": [
+        "cosa vedi",
+        "cosa sto tenendo",
+        "cos'\u00e8 questo"
+      ],
+      "pt": [
+        "o que voc\u00ea v\u00ea",
+        "o que estou segurando",
+        "o que \u00e9 isso"
+      ],
+      "ja": [
+        "\u4f55\u304c\u898b\u3048\u308b",
+        "\u4f55\u3092\u6301\u3063\u3066",
+        "\u3053\u308c\u306f\u4f55"
+      ],
+      "zh": [
+        "\u4f60\u770b\u5230\u4e86\u4ec0\u4e48",
+        "\u6211\u62ff\u7740\u4ec0\u4e48",
+        "\u8fd9\u662f\u4ec0\u4e48"
+      ]
+    },
+    "visual_prompt": "Use the supplied camera image and any detector results as evidence. Answer the user's question directly. If the image is ambiguous, say so rather than inventing details.",
+    "reasoning": {
+      "default_mode": "auto",
+      "auto_min_chars": 360,
+      "deep_keywords": [
+        "think deeply",
+        "reason through",
+        "analyze carefully",
+        "analyse carefully",
+        "step by step",
+        "compare the tradeoffs",
+        "compare the trade-offs",
+        "tradeoffs",
+        "trade-offs",
+        "debug this",
+        "root cause",
+        "work this out carefully",
+        "complex plan",
+        "prove that",
+        "mathematical proof",
+        "derive the"
+      ],
+      "initial_wait_s": 4.0,
+      "repeat_wait_s": 9.0,
+      "max_wait_cues": 4,
+      "waiting_lines": [
+        "I'm still thinking.",
+        "I haven't forgotten. I'm still working through it.",
+        "Give me a moment; this one has a few moving parts.",
+        "I'm checking that carefully before I answer.",
+        "Still with you. The silicon gears are turning.",
+        "One moment. My electrons took the scenic route on this one.",
+        "I'm still on it. Apparently this question came with bonus steps.",
+        "Thinking... responsibly, I promise."
+      ],
+      "auto_score_threshold": 2.75,
+      "quantitative_verification": true
+    },
+    "action_router": {
+      "enabled": true,
+      "auto_vision": true,
+      "note": "Normal conversation can request a Pi-owned camera frame automatically. Slash commands remain diagnostics/overrides."
+    }
+  },
+  "scheduler": {
+    "enabled": true,
+    "max_queue": 32
+  },
+  "knowledge": {
+    "enabled": true,
+    "database_path": "runtime/knowledge.sqlite3",
+    "source_dir": "knowledge/sources",
+    "top_k": 5,
+    "max_context_chars": 6000,
+    "min_term_coverage": 0.34
+  },
+  "identity": {
+    "enabled": true,
+    "backend": "opencv_sface",
+    "detector_model_path": "models/face/face_detection_yunet_2023mar.onnx",
+    "recognition_model_path": "models/face/face_recognition_sface_2021dec.onnx",
+    "detector_score_threshold": 0.85,
+    "detector_nms_threshold": 0.3,
+    "detector_top_k": 5000
+  },
+  "people": {
+    "enabled": true,
+    "database_path": "runtime/people.sqlite3",
+    "max_people": 50,
+    "max_memories_per_person": 12,
+    "max_memory_chars": 400,
+    "poll_interval_s": 0.5,
+    "leave_grace_s": 2.5,
+    "recognition_interval_s": 1.0,
+    "match_threshold": 0.45,
+    "identity_confirmations": 2,
+    "enrollment_samples": 3,
+    "enrollment_spacing_s": 0.25,
+    "note": "Presence-based context reset works with existing Pi face tracking even when optional identity models are not installed. Persistent names/memories require local face-embedding models.",
+    "unknown_confirmations": 2,
+    "touch_interval_s": 30.0,
+    "remember_last_topic": true,
+    "max_topic_chars": 360,
+    "onboarding_enabled": true,
+    "ask_name_after_turns": 0,
+    "ask_name_retry_turns": 2,
+    "offer_persistent_identity": true
+  },
+  "world_state": {
+    "enabled": true,
+    "poll_period_s": 3.0,
+    "current_ms": 6500,
+    "retention_ms": 20000,
+    "max_tracks": 40
+  },
+  "engineering_knowledge": {
+    "enabled": true,
+    "database_path": "runtime/engineering.sqlite3",
+    "top_k": 4,
+    "max_context_chars": 3600
+  }
+}

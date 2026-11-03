@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error_code }} | ARC Robotics{% endblock %}
+
+{% block nav %}
+<a href="{{ url_for('splash') }}">Project</a>
+<a href="{{ url_for('help_page') }}">Help</a>
+{% endblock %}
+
+{% block header_actions %}{% endblock %}
+
+{% block content %}
+<section class="auth-layout circuit-reactive" data-circuit-reactive>
+    <div class="auth-intro">
+        <p class="eyebrow">SYSTEM RESPONSE / {{ error_code }}</p>
+        <h1>{{ error_title }}</h1>
+        <p>{{ error_message }}</p>
+        <a class="button button--secondary" href="{{ url_for('login') }}">Return to login</a>
+    </div>
+</section>
+{% endblock %}

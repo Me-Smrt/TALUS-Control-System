@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#090A0F">
+    {% if current_user.is_authenticated %}<meta name="csrf-token" content="{{ csrf_token() }}">{% endif %}
+    <title>{% block title %}ARC Robotics Dashboard{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body class="page page--{{ page_name|default('default') }}">
+    <div id="circuit-background" class="circuit-background" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="{{ url_for('splash') }}" aria-label="ARC home">
+            <span class="brand__mark" aria-hidden="true">
+                <span class="brand__mark-core"></span>
+            </span>
+            <span class="brand__text">
+                <strong>ARC</strong>
+                <span>Autonomous Robotics</span>
+            </span>
+        </a>
+
+        <button
+            class="site-nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            data-nav-toggle
+        >
+            <span class="site-nav-toggle__line" aria-hidden="true"></span>
+            <span class="site-nav-toggle__line" aria-hidden="true"></span>
+            <span class="site-nav-toggle__line" aria-hidden="true"></span>
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <nav id="primary-navigation" class="site-nav" aria-label="Primary" data-primary-nav>
+            {% block nav %}
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('robot') }}">Robot</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('help_page') }}">Help</a>
+                {% else %}
+                <a href="{{ url_for('splash') }}">Project</a>
+                <a href="{{ url_for('help_page') }}">Help</a>
+                {% endif %}
+            {% endblock %}
+        </nav>
+
+        <div class="site-header__actions">
+            {% block header_actions %}
+                {% if current_user.is_authenticated %}
+                    {% include "_operator_actions.html" %}
+                {% else %}
+                <a class="button button--ghost" href="{{ url_for('login') }}">Log in</a>
+                {% endif %}
+            {% endblock %}
+        </div>
+    </header>
+
+    <main class="page-shell">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <span>ARC / Local Robotics Interface</span>
+        <span class="mono">SYS.UI // REV 0.4</span>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/circuit-background.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

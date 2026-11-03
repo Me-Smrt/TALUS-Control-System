@@ -1,0 +1,566 @@
+{
+  "schema": "automaton.aux.voices.v1",
+  "voices": [
+    {
+      "id": "kokoro_af_heart",
+      "display_name": "Kokoro — Heart (US female)",
+      "backend": "kokoro",
+      "language": "en-US",
+      "languages": [
+        "en"
+      ],
+      "voice": "af_heart",
+      "lang_code": "a",
+      "voice_file": "voices/af_heart.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_af_bella",
+      "display_name": "Kokoro — Bella (US female)",
+      "backend": "kokoro",
+      "language": "en-US",
+      "languages": [
+        "en"
+      ],
+      "voice": "af_bella",
+      "lang_code": "a",
+      "voice_file": "voices/af_bella.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_am_adam",
+      "display_name": "Kokoro — Adam (US male)",
+      "backend": "kokoro",
+      "language": "en-US",
+      "languages": [
+        "en"
+      ],
+      "voice": "am_adam",
+      "lang_code": "a",
+      "voice_file": "voices/am_adam.pt",
+      "enabled": true,
+      "gender": "male"
+    },
+    {
+      "id": "kokoro_bf_emma",
+      "display_name": "Kokoro — Emma (UK female)",
+      "backend": "kokoro",
+      "language": "en-GB",
+      "languages": [
+        "en"
+      ],
+      "voice": "bf_emma",
+      "lang_code": "b",
+      "voice_file": "voices/bf_emma.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_ff_siwis",
+      "display_name": "Kokoro — Siwis (French)",
+      "backend": "kokoro",
+      "language": "fr-FR",
+      "languages": [
+        "fr"
+      ],
+      "voice": "ff_siwis",
+      "lang_code": "f",
+      "voice_file": "voices/ff_siwis.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_if_sara",
+      "display_name": "Kokoro — Sara (Italian)",
+      "backend": "kokoro",
+      "language": "it-IT",
+      "languages": [
+        "it"
+      ],
+      "voice": "if_sara",
+      "lang_code": "i",
+      "voice_file": "voices/if_sara.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_jf_alpha",
+      "display_name": "Kokoro — Alpha (Japanese)",
+      "backend": "kokoro",
+      "language": "ja-JP",
+      "languages": [
+        "ja"
+      ],
+      "voice": "jf_alpha",
+      "lang_code": "j",
+      "voice_file": "voices/jf_alpha.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_ef_dora",
+      "display_name": "Kokoro — Dora (Spanish female)",
+      "backend": "kokoro",
+      "language": "es-ES",
+      "languages": [
+        "es"
+      ],
+      "voice": "ef_dora",
+      "lang_code": "e",
+      "voice_file": "voices/ef_dora.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_hf_alpha",
+      "display_name": "Kokoro — Alpha (Hindi female)",
+      "backend": "kokoro",
+      "language": "hi-IN",
+      "languages": [
+        "hi"
+      ],
+      "voice": "hf_alpha",
+      "lang_code": "h",
+      "voice_file": "voices/hf_alpha.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_pf_dora",
+      "display_name": "Kokoro — Dora (Brazilian Portuguese female)",
+      "backend": "kokoro",
+      "language": "pt-BR",
+      "languages": [
+        "pt"
+      ],
+      "voice": "pf_dora",
+      "lang_code": "p",
+      "voice_file": "voices/pf_dora.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "kokoro_zf_xiaoxiao",
+      "display_name": "Kokoro — Xiaoxiao (Mandarin female)",
+      "backend": "kokoro",
+      "language": "zh-CN",
+      "languages": [
+        "zh"
+      ],
+      "voice": "zf_xiaoxiao",
+      "lang_code": "z",
+      "voice_file": "voices/zf_xiaoxiao.pt",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "piper_en_us_norman_medium",
+      "display_name": "Piper — Norman (US male, medium)",
+      "backend": "piper",
+      "language": "en-US",
+      "languages": [
+        "en"
+      ],
+      "model_path": "models/piper/en_US-norman-medium.onnx",
+      "config_path": "models/piper/en_US-norman-medium.onnx.json",
+      "enabled": true,
+      "gender": "male"
+    },
+    {
+      "id": "piper_de_de_thorsten_medium",
+      "display_name": "Piper — Thorsten (German male, medium)",
+      "backend": "piper",
+      "language": "de-DE",
+      "languages": [
+        "de"
+      ],
+      "model_path": "models/piper/de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx",
+      "config_path": "models/piper/de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx.json",
+      "enabled": true,
+      "gender": "male"
+    },
+    {
+      "id": "piper_ko_kr_kss_medium",
+      "display_name": "Piper — KSS (Korean female, medium)",
+      "backend": "piper",
+      "language": "ko-KR",
+      "languages": [
+        "ko"
+      ],
+      "model_path": "models/piper/ko/ko_KR/kss/medium/ko_KR-kss-medium.onnx",
+      "config_path": "models/piper/ko/ko_KR/kss/medium/ko_KR-kss-medium.onnx.json",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "piper_ar_jo_kareem_medium",
+      "display_name": "Piper — Kareem (Arabic male, medium)",
+      "backend": "piper",
+      "language": "ar-JO",
+      "languages": [
+        "ar"
+      ],
+      "model_path": "models/piper/ar/ar_JO/kareem/medium/ar_JO-kareem-medium.onnx",
+      "config_path": "models/piper/ar/ar_JO/kareem/medium/ar_JO-kareem-medium.onnx.json",
+      "enabled": true,
+      "gender": "male"
+    },
+    {
+      "id": "piper_ru_ru_denis_medium",
+      "display_name": "Piper — Denis (Russian male, medium)",
+      "backend": "piper",
+      "language": "ru-RU",
+      "languages": [
+        "ru"
+      ],
+      "model_path": "models/piper/ru/ru_RU/denis/medium/ru_RU-denis-medium.onnx",
+      "config_path": "models/piper/ru/ru_RU/denis/medium/ru_RU-denis-medium.onnx.json",
+      "enabled": true,
+      "gender": "male"
+    },
+    {
+      "id": "piper_nl_nl_pim_medium",
+      "display_name": "Piper — Pim (Dutch, medium)",
+      "backend": "piper",
+      "language": "nl-NL",
+      "languages": [
+        "nl"
+      ],
+      "model_path": "models/piper/nl/nl_NL/pim/medium/nl_NL-pim-medium.onnx",
+      "config_path": "models/piper/nl/nl_NL/pim/medium/nl_NL-pim-medium.onnx.json",
+      "enabled": true,
+      "gender": "male"
+    },
+    {
+      "id": "piper_pl_pl_gosia_medium",
+      "display_name": "Piper — Gosia (Polish female, medium)",
+      "backend": "piper",
+      "language": "pl-PL",
+      "languages": [
+        "pl"
+      ],
+      "model_path": "models/piper/pl/pl_PL/gosia/medium/pl_PL-gosia-medium.onnx",
+      "config_path": "models/piper/pl/pl_PL/gosia/medium/pl_PL-gosia-medium.onnx.json",
+      "enabled": true,
+      "gender": "female"
+    },
+    {
+      "id": "piper_tr_tr_dfki_medium",
+      "display_name": "Piper — DFKI (Turkish, medium)",
+      "backend": "piper",
+      "language": "tr-TR",
+      "languages": [
+        "tr"
+      ],
+      "model_path": "models/piper/tr/tr_TR/dfki/medium/tr_TR-dfki-medium.onnx",
+      "config_path": "models/piper/tr/tr_TR/dfki/medium/tr_TR-dfki-medium.onnx.json",
+      "enabled": true,
+      "gender": "unspecified"
+    },
+    {
+      "id": "piper_uk_ua_ukrainian_tts_medium",
+      "display_name": "Piper — Ukrainian TTS (medium)",
+      "backend": "piper",
+      "language": "uk-UA",
+      "languages": [
+        "uk"
+      ],
+      "model_path": "models/piper/uk/uk_UA/ukrainian_tts/medium/uk_UA-ukrainian_tts-medium.onnx",
+      "config_path": "models/piper/uk/uk_UA/ukrainian_tts/medium/uk_UA-ukrainian_tts-medium.onnx.json",
+      "enabled": true,
+      "gender": "unspecified"
+    },
+    {
+      "id": "piper_id_id_news_tts_medium",
+      "display_name": "Piper — News TTS (Indonesian, medium)",
+      "backend": "piper",
+      "language": "id-ID",
+      "languages": [
+        "id"
+      ],
+      "model_path": "models/piper/id/id_ID/news_tts/medium/id_ID-news_tts-medium.onnx",
+      "config_path": "models/piper/id/id_ID/news_tts/medium/id_ID-news_tts-medium.onnx.json",
+      "enabled": true,
+      "gender": "unspecified"
+    },
+    {
+      "id": "piper_vi_vn_vais1000_medium",
+      "display_name": "Piper — VAIS1000 (Vietnamese, medium)",
+      "backend": "piper",
+      "language": "vi-VN",
+      "languages": [
+        "vi"
+      ],
+      "model_path": "models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx",
+      "config_path": "models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx.json",
+      "enabled": true,
+      "gender": "unspecified"
+    },
+    {
+      "id": "kokoro_em_alex",
+      "display_name": "Kokoro — Alex (Spanish male)",
+      "backend": "kokoro",
+      "language": "es-ES",
+      "languages": [
+        "es"
+      ],
+      "voice": "em_alex",
+      "lang_code": "e",
+      "voice_file": "voices/em_alex.pt",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "kokoro_hm_omega",
+      "display_name": "Kokoro — Omega (Hindi male)",
+      "backend": "kokoro",
+      "language": "hi-IN",
+      "languages": [
+        "hi"
+      ],
+      "voice": "hm_omega",
+      "lang_code": "h",
+      "voice_file": "voices/hm_omega.pt",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "kokoro_im_nicola",
+      "display_name": "Kokoro — Nicola (Italian male)",
+      "backend": "kokoro",
+      "language": "it-IT",
+      "languages": [
+        "it"
+      ],
+      "voice": "im_nicola",
+      "lang_code": "i",
+      "voice_file": "voices/im_nicola.pt",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "kokoro_jm_kumo",
+      "display_name": "Kokoro — Kumo (Japanese male)",
+      "backend": "kokoro",
+      "language": "ja-JP",
+      "languages": [
+        "ja"
+      ],
+      "voice": "jm_kumo",
+      "lang_code": "j",
+      "voice_file": "voices/jm_kumo.pt",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "kokoro_pm_alex",
+      "display_name": "Kokoro — Alex (Brazilian Portuguese male)",
+      "backend": "kokoro",
+      "language": "pt-BR",
+      "languages": [
+        "pt"
+      ],
+      "voice": "pm_alex",
+      "lang_code": "p",
+      "voice_file": "voices/pm_alex.pt",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "kokoro_zm_yunyang",
+      "display_name": "Kokoro — Yunyang (Mandarin male)",
+      "backend": "kokoro",
+      "language": "zh-CN",
+      "languages": [
+        "zh"
+      ],
+      "voice": "zm_yunyang",
+      "lang_code": "z",
+      "voice_file": "voices/zm_yunyang.pt",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "piper_fr_fr_tom_medium",
+      "display_name": "Piper — Tom (French male, medium)",
+      "backend": "piper",
+      "language": "fr-FR",
+      "languages": [
+        "fr"
+      ],
+      "model_path": "models/piper/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx",
+      "config_path": "models/piper/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx.json",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "piper_de_de_kerstin_low",
+      "display_name": "Piper — Kerstin (German female, low)",
+      "backend": "piper",
+      "language": "de-DE",
+      "languages": [
+        "de"
+      ],
+      "model_path": "models/piper/de/de_DE/kerstin/low/de_DE-kerstin-low.onnx",
+      "config_path": "models/piper/de/de_DE/kerstin/low/de_DE-kerstin-low.onnx.json",
+      "gender": "female",
+      "enabled": true
+    },
+    {
+      "id": "piper_ru_ru_irina_medium",
+      "display_name": "Piper — Irina (Russian female, medium)",
+      "backend": "piper",
+      "language": "ru-RU",
+      "languages": [
+        "ru"
+      ],
+      "model_path": "models/piper/ru/ru_RU/irina/medium/ru_RU-irina-medium.onnx",
+      "config_path": "models/piper/ru/ru_RU/irina/medium/ru_RU-irina-medium.onnx.json",
+      "gender": "female",
+      "enabled": true
+    },
+    {
+      "id": "piper_pl_pl_mc_speech_medium",
+      "display_name": "Piper — MC Speech (Polish male, medium)",
+      "backend": "piper",
+      "language": "pl-PL",
+      "languages": [
+        "pl"
+      ],
+      "model_path": "models/piper/pl/pl_PL/mc_speech/medium/pl_PL-mc_speech-medium.onnx",
+      "config_path": "models/piper/pl/pl_PL/mc_speech/medium/pl_PL-mc_speech-medium.onnx.json",
+      "gender": "male",
+      "enabled": true
+    },
+    {
+      "id": "piper_uk_ua_tetiana_high",
+      "display_name": "Piper — Tetiana (Ukrainian female, high)",
+      "backend": "piper",
+      "language": "uk-UA",
+      "languages": [
+        "uk"
+      ],
+      "model_path": "models/piper/uk/uk_UA/tetiana/high/uk_UA-tetiana-high.onnx",
+      "config_path": "models/piper/uk/uk_UA/tetiana/high/uk_UA-tetiana-high.onnx.json",
+      "gender": "female",
+      "enabled": true
+    },
+    {
+      "id": "piper_uk_ua_mykyta_high",
+      "display_name": "Piper — Mykyta (Ukrainian male, high)",
+      "backend": "piper",
+      "language": "uk-UA",
+      "languages": [
+        "uk"
+      ],
+      "model_path": "models/piper/uk/uk_UA/mykyta/high/uk_UA-mykyta-high.onnx",
+      "config_path": "models/piper/uk/uk_UA/mykyta/high/uk_UA-mykyta-high.onnx.json",
+      "gender": "male",
+      "enabled": true
+    }
+  ],
+  "fallback_language_voice": {
+    "en": "kokoro_af_heart",
+    "fr": "kokoro_ff_siwis",
+    "it": "kokoro_if_sara",
+    "ja": "kokoro_jf_alpha",
+    "es": "kokoro_ef_dora",
+    "hi": "kokoro_hf_alpha",
+    "pt": "kokoro_pf_dora",
+    "zh": "kokoro_zf_xiaoxiao",
+    "de": "piper_de_de_thorsten_medium",
+    "ko": "piper_ko_kr_kss_medium",
+    "ar": "piper_ar_jo_kareem_medium",
+    "ru": "piper_ru_ru_denis_medium",
+    "nl": "piper_nl_nl_pim_medium",
+    "pl": "piper_pl_pl_gosia_medium",
+    "tr": "piper_tr_tr_dfki_medium",
+    "uk": "piper_uk_ua_ukrainian_tts_medium",
+    "id": "piper_id_id_news_tts_medium",
+    "vi": "piper_vi_vn_vais1000_medium"
+  },
+  "default_voice_set_id": "female",
+  "voice_sets": [
+    {
+      "id": "female",
+      "display_name": "Female",
+      "description": "Use only female voices for each language. If no installed female voice exists for a language, speech for that span is skipped rather than using a male/mixed fallback.",
+      "selector": {
+        "gender": "female"
+      },
+      "enabled": true,
+      "language_voices": {
+        "en": "kokoro_af_heart",
+        "es": "kokoro_ef_dora",
+        "fr": "kokoro_ff_siwis",
+        "hi": "kokoro_hf_alpha",
+        "it": "kokoro_if_sara",
+        "ja": "kokoro_jf_alpha",
+        "pt": "kokoro_pf_dora",
+        "zh": "kokoro_zf_xiaoxiao",
+        "de": "piper_de_de_kerstin_low",
+        "ko": "piper_ko_kr_kss_medium",
+        "ru": "piper_ru_ru_irina_medium",
+        "pl": "piper_pl_pl_gosia_medium",
+        "uk": "piper_uk_ua_tetiana_high"
+      },
+      "fallback_policy": "strict"
+    },
+    {
+      "id": "male",
+      "display_name": "Male",
+      "description": "Use only male voices for each language. If no installed male voice exists for a language, speech for that span is skipped rather than using a female/mixed fallback.",
+      "selector": {
+        "gender": "male"
+      },
+      "enabled": true,
+      "language_voices": {
+        "en": "kokoro_am_adam",
+        "es": "kokoro_em_alex",
+        "fr": "piper_fr_fr_tom_medium",
+        "hi": "kokoro_hm_omega",
+        "it": "kokoro_im_nicola",
+        "ja": "kokoro_jm_kumo",
+        "pt": "kokoro_pm_alex",
+        "zh": "kokoro_zm_yunyang",
+        "de": "piper_de_de_thorsten_medium",
+        "ar": "piper_ar_jo_kareem_medium",
+        "ru": "piper_ru_ru_denis_medium",
+        "nl": "piper_nl_nl_pim_medium",
+        "pl": "piper_pl_pl_mc_speech_medium",
+        "uk": "piper_uk_ua_mykyta_high"
+      },
+      "fallback_policy": "strict"
+    },
+    {
+      "id": "best_available",
+      "display_name": "Best available (mixed)",
+      "description": "Use the preferred correct-language voice regardless of gender. This is the only intentionally mixed fallback set.",
+      "selector": {},
+      "enabled": true,
+      "language_voices": {
+        "en": "kokoro_af_heart",
+        "fr": "kokoro_ff_siwis",
+        "it": "kokoro_if_sara",
+        "ja": "kokoro_jf_alpha",
+        "es": "kokoro_ef_dora",
+        "hi": "kokoro_hf_alpha",
+        "pt": "kokoro_pf_dora",
+        "zh": "kokoro_zf_xiaoxiao",
+        "de": "piper_de_de_thorsten_medium",
+        "ko": "piper_ko_kr_kss_medium",
+        "ar": "piper_ar_jo_kareem_medium",
+        "ru": "piper_ru_ru_denis_medium",
+        "nl": "piper_nl_nl_pim_medium",
+        "pl": "piper_pl_pl_gosia_medium",
+        "tr": "piper_tr_tr_dfki_medium",
+        "uk": "piper_uk_ua_ukrainian_tts_medium",
+        "id": "piper_id_id_news_tts_medium",
+        "vi": "piper_vi_vn_vais1000_medium"
+      },
+      "fallback_policy": "correct_language"
+    }
+  ]
+}

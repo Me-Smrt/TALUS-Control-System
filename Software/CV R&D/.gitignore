@@ -1,0 +1,163 @@
+# ============================================================================
+# Automaton / InMoov CV R&D
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Python virtual environments
+# ----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# ----------------------------------------------------------------------------
+# Python bytecode / caches
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# ----------------------------------------------------------------------------
+# Test / coverage artifacts
+# ----------------------------------------------------------------------------
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.tox/
+.nox/
+
+# ----------------------------------------------------------------------------
+# Packaging / build artifacts
+# ----------------------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ----------------------------------------------------------------------------
+# Runtime logs and recordings
+#
+# Keep the directory itself in Git via logs/.gitkeep.
+# ----------------------------------------------------------------------------
+logs/*
+!logs/.gitkeep
+*.log
+
+# ----------------------------------------------------------------------------
+# Downloaded ML models / generated model assets
+#
+# The MediaPipe task model is downloaded automatically at runtime.
+# Keep models/.gitkeep so the directory exists in a fresh clone.
+# ----------------------------------------------------------------------------
+models/*
+!models/.gitkeep
+
+# ----------------------------------------------------------------------------
+# InMoov builder download/cache output
+#
+# build_inmoov_complete.py downloads/expands upstream model sources here and
+# generates intermediate URDF/dependency data. None of this belongs in Git.
+# ----------------------------------------------------------------------------
+_inmoov_cache/
+**/_inmoov_cache/
+
+# Local dependency caches created by the Blender builder
+python_deps/
+**/python_deps/
+
+# Generated/intermediate URDF files
+generated_*.urdf
+
+# ----------------------------------------------------------------------------
+# Generated Blender/model outputs
+#
+# The builder script is source-controlled; generated scenes/reports generally
+# should not be. Remove specific patterns below later if you intentionally
+# decide to version a canonical .blend or report.
+# ----------------------------------------------------------------------------
+InMoov_Complete_Rigged_MM.blend
+InMoov_Complete_Rigged_MM.json
+
+# Blender backup / autosave files
+*.blend1
+*.blend2
+*.blend3
+*.blend@
+*.blend~
+
+# ----------------------------------------------------------------------------
+# Local captures / ad-hoc CV datasets
+# ----------------------------------------------------------------------------
+*.jsonl
+
+# Common video capture formats. Uncomment individual files with !path/file.ext
+# if a small fixture becomes intentionally version-controlled.
+*.avi
+*.mp4
+*.mov
+*.mkv
+*.webm
+
+# ----------------------------------------------------------------------------
+# Environment variables / local secrets
+# ----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------------------------------------------------------
+# Jupyter (if used for R&D later)
+# ----------------------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ----------------------------------------------------------------------------
+# IDE / editor state
+# ----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# Visual Studio / VS Code misc
+.vs/
+
+# Sublime Text
+*.sublime-workspace
+
+# ----------------------------------------------------------------------------
+# OS-generated files
+# ----------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux / desktop environments
+.directory
+.Trash-*
+
+# ----------------------------------------------------------------------------
+# Temporary files
+# ----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~

@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "reference_date": "2026-09-28",
+  "source": {
+    "name": "Sentience Robotics current InMoov URDF/Xacro",
+    "repository": "https://github.com/Sentience-Robotics/inmoov_urdf",
+    "entry_xacro": "description/urdf/inmoov.urdf.xacro",
+    "model_scale": 0.1196,
+    "notes": "Upper-body values below are evaluated from the current Xacro used by the uploaded Blender builder. Distances are metres; angles are radians. The uploaded Blender builder aligns each source-control bone's local Y rotation with the URDF joint axis and applies the URDF limits.",
+    "velocity_note": "Current maintained Xacro sets these modeled revolute joints to 0.78540 rad/s (45 deg/s); v0.2 uses that as the default simulation speed ceiling, not as a claim about every physical servo under every load."
+  },
+  "head": {
+    "turn": {
+      "control": "CTRL_HEAD_TURN",
+      "lower": -1.5707963268,
+      "upper": 1.5707963268,
+      "velocity_limit_rad_s": 0.7854
+    },
+    "nod": {
+      "control": "CTRL_HEAD_NOD",
+      "lower": -0.3490658504,
+      "upper": 0.3490658504,
+      "velocity_limit_rad_s": 0.7854
+    },
+    "tilt": {
+      "control": "CTRL_HEAD_TILT",
+      "lower": -0.3490658504,
+      "upper": 0.3490658504,
+      "velocity_limit_rad_s": 0.7854
+    }
+  },
+  "eyes": {
+    "left_pan": {
+      "control": "CTRL_EYE.L.PAN",
+      "lower": -0.3490658504,
+      "upper": 0.3490658504,
+      "velocity_limit_rad_s": 0.7854
+    },
+    "left_tilt": {
+      "control": "CTRL_EYE.L.TILT",
+      "lower": -0.7853981634,
+      "upper": 0.7853981634,
+      "velocity_limit_rad_s": 0.7854
+    },
+    "right_pan": {
+      "control": "CTRL_EYE.R.PAN",
+      "lower": -0.3490658504,
+      "upper": 0.3490658504,
+      "velocity_limit_rad_s": 0.7854
+    },
+    "right_tilt": {
+      "control": "CTRL_EYE.R.TILT",
+      "lower": -0.7853981634,
+      "upper": 0.7853981634,
+      "velocity_limit_rad_s": 0.7854
+    }
+  },
+  "jaw": {
+    "control": "CTRL_JAW",
+    "lower": 0.0,
+    "upper": 0.1745329252,
+    "velocity_limit_rad_s": 0.7854
+  },
+  "torso": {
+    "yaw": {
+      "control": "CTRL_TORSO_YAW",
+      "lower": -1.5707963268,
+      "upper": 1.5707963268,
+      "velocity_limit_rad_s": 0.7854
+    },
+    "bend": {
+      "control": "CTRL_TORSO_BEND",
+      "lower": -0.2617993878,
+      "upper": 0.2617993878,
+      "velocity_limit_rad_s": 0.7854
+    }
+  },
+  "arms": {
+    "right": {
+      "blender_side": "R",
+      "shoulder_base_origin_torso_m": [
+        -0.161434884,
+        -0.000403052,
+        0.335775804
+      ],
+      "joints": [
+        {
+          "name": "right_shoulder_y",
+          "origin_xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.99994,
+            0.01111
+          ],
+          "lower": 0.0,
+          "upper": 1.5707963268,
+          "velocity_limit_rad_s": 0.7854
+        },
+        {
+          "name": "right_shoulder_x",
+          "origin_xyz_m": [
+            -0.013575796,
+            0.000226044,
+            -0.044854784
+          ],
+          "origin_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            -0.99994,
+            0.0,
+            0.01111
+          ],
+          "lower": -1.5707963268,
+          "upper": 2.3561944902,
+          "velocity_limit_rad_s": 0.7854
+        },
+        {
+          "name": "right_shoulder_z",
+          "origin_xyz_m": [
+            -0.074637576,
+            -0.001120652,
+            -0.071067516
+          ],
+          "origin_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "lower": -0.4276056667,
+          "upper": 0.837758041,
+          "velocity_limit_rad_s": 0.7854
+        },
+        {
+          "name": "right_elbow_x",
+          "origin_xyz_m": [
+            0.001026168,
+            0.034956688,
+            -0.253046092
+          ],
+          "origin_rpy_rad": [
+            0.06567,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            -0.99994,
+            0.0,
+            0.01111
+          ],
+          "lower": 0.0,
+          "upper": 1.5707963268,
+          "capture_point": "elbow",
+          "velocity_limit_rad_s": 0.7854
+        }
+      ],
+      "endpoint": {
+        "name": "right_wrist_z_origin",
+        "origin_xyz_m": [
+          0.010485332,
+          -0.118124136,
+          -0.303707456
+        ],
+        "origin_rpy_rad": [
+          -0.41605,
+          0.0,
+          0.0
+        ],
+        "capture_point": "wrist"
+      },
+      "wrist_rotation_z": {
+        "lower": -1.5707963268,
+        "upper": 1.5707963268,
+        "joint_name": "right_wrist_z",
+        "velocity_limit_rad_s": 0.7854
+      },
+      "wrist_bend_x": {
+        "lower": 0.0,
+        "upper": 1.5707963268,
+        "joint_name": "i01.rightHand.wrist.001",
+        "velocity_limit_rad_s": 0.7854
+      }
+    },
+    "left": {
+      "blender_side": "L",
+      "shoulder_base_origin_torso_m": [
+        0.162024512,
+        -0.000403052,
+        0.335775804
+      ],
+      "joints": [
+        {
+          "name": "left_shoulder_y",
+          "origin_xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            -0.99994,
+            0.01111
+          ],
+          "lower": 0.0,
+          "upper": 1.5707963268,
+          "velocity_limit_rad_s": 0.7854
+        },
+        {
+          "name": "left_shoulder_x",
+          "origin_xyz_m": [
+            0.013575796,
+            0.000226044,
+            -0.044854784
+          ],
+          "origin_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            -0.99994,
+            0.0,
+            0.01111
+          ],
+          "lower": -1.5707963268,
+          "upper": 2.3561944902,
+          "velocity_limit_rad_s": 0.7854
+        },
+        {
+          "name": "left_shoulder_z",
+          "origin_xyz_m": [
+            0.074637576,
+            -0.001120652,
+            -0.071067516
+          ],
+          "origin_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "lower": -0.9162978573,
+          "upper": 0.471238898,
+          "velocity_limit_rad_s": 0.7854
+        },
+        {
+          "name": "left_elbow_x",
+          "origin_xyz_m": [
+            -0.001532076,
+            0.034956688,
+            -0.253046092
+          ],
+          "origin_rpy_rad": [
+            0.06567,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            -0.99994,
+            0.0,
+            0.01111
+          ],
+          "lower": 0.0,
+          "upper": 1.5707963268,
+          "capture_point": "elbow",
+          "velocity_limit_rad_s": 0.7854
+        }
+      ],
+      "endpoint": {
+        "name": "left_wrist_z_origin",
+        "origin_xyz_m": [
+          -0.010485332,
+          -0.118124136,
+          -0.303707456
+        ],
+        "origin_rpy_rad": [
+          -0.41605,
+          0.0,
+          0.0
+        ],
+        "capture_point": "wrist"
+      },
+      "wrist_rotation_z": {
+        "lower": -1.5707963268,
+        "upper": 1.5707963268,
+        "joint_name": "left_wrist_z",
+        "velocity_limit_rad_s": 0.7854
+      },
+      "wrist_bend_x": {
+        "lower": 0.0,
+        "upper": 1.5707963268,
+        "joint_name": "i01.leftHand.wrist.001",
+        "velocity_limit_rad_s": 0.7854
+      }
+    }
+  },
+  "hands": {
+    "finger_normalized_range": [
+      0.0,
+      1.0
+    ],
+    "urdf_finger_joint_typical_range_rad": [
+      0.0,
+      1.5707963268
+    ],
+    "note": "The proof-of-concept publishes normalized curl per finger. Exact real-hand tendon/servo calibration is intentionally deferred until physical measurements are available."
+  }
+}

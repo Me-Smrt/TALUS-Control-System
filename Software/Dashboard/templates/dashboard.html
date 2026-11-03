@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | ARC Robotics{% endblock %}
+
+{% block header_actions %}
+{% include "_operator_actions.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-shell dashboard-shell--compact" data-robot-dashboard>
+    {% include "_dashboard_nav.html" %}
+
+    <div class="dashboard-main dashboard-main--compact">
+        <section class="dashboard-title dashboard-title--compact circuit-reactive" data-circuit-reactive>
+            <div>
+                <p class="eyebrow">TALUS // OPERATOR OVERVIEW</p>
+                <h1>Dashboard</h1>
+                <p>Control, perception, cognition, and performance in one surface.</p>
+            </div>
+            <div class="dashboard-title__meta mono">
+                <span data-ui="last-update">STATE // WAITING</span><br>
+                <span data-ui="state-sequence">SEQ // —</span>
+            </div>
+        </section>
+
+        <section class="metric-grid metric-grid--compact circuit-reactive" data-circuit-reactive>
+            <article class="metric-card"><span class="metric-card__label">Pi</span><strong data-ui="system-status">—</strong><span class="metric-card__meta" data-ui="system-health">awaiting state</span></article>
+            <article class="metric-card"><span class="metric-card__label">Safety</span><strong data-ui="safety-status">—</strong><span class="metric-card__meta" data-ui="safety-source">pending</span></article>
+            <article class="metric-card"><span class="metric-card__label">Perception</span><strong data-ui="perception-fps">—</strong><span class="metric-card__meta" data-ui="perception-summary">MediaPipe / IK</span></article>
+            <article class="metric-card"><span class="metric-card__label">Aux</span><strong data-ui="aux-status">—</strong><span class="metric-card__meta" data-ui="aux-type">local cognition</span></article>
+        </section>
+
+        <section class="operator-grid circuit-reactive dashboard-section-gap" data-circuit-reactive data-hardware-metrics data-aux-dashboard>
+            <article class="panel panel--compact compute-panel">
+                <div class="panel__header panel__header--compact">
+                    <div><h2>Compute</h2><span class="panel__subtext">Pi control plane + auxiliary cognition</span></div>
+                    <span class="panel__badge" data-ui="compute-badge">WAITING</span>
+                </div>
+                <div class="compute-table">
+                    <div class="compute-table__row compute-table__head mono"><span>NODE</span><span>CPU</span><span>MEM</span><span>TEMP</span><span>DISK</span><span>RSS</span></div>
+                    <div class="compute-table__row"><strong>PI</strong><span data-ui="pi-metric-cpu">—</span><span data-ui="pi-metric-memory">—</span><span data-ui="pi-metric-temp">—</span><span data-ui="pi-metric-disk">—</span><span data-ui="pi-metric-rss">—</span></div>
+                    <div class="compute-table__row"><strong>AUX</strong><span data-ui="aux-metric-cpu">—</span><span data-ui="aux-metric-memory">—</span><span data-ui="aux-metric-temp">—</span><span data-ui="aux-metric-disk">—</span><span data-ui="aux-metric-rss">—</span></div>
+                </div>
+                <div class="metrics-panel__footer mono">
+                    <span data-ui="pi-metric-uptime">PI UPTIME // —</span>
+                    <span data-ui="aux-metric-uptime">AUX UPTIME // —</span>
+                    <span class="sr-only" data-ui="pi-metric-load">—</span><span class="sr-only" data-ui="aux-metric-load">—</span>
+                    <span class="sr-only" data-ui="pi-metric-detail">—</span><span class="sr-only" data-ui="aux-metric-detail">—</span>
+                    <span class="sr-only" data-ui="pi-metrics-badge">—</span><span class="sr-only" data-ui="aux-metrics-badge">—</span>
+                </div>
+            </article>
+
+            <article class="panel panel--compact telemetry-panel" data-performance-telemetry>
+                <div class="panel__header panel__header--compact">
+                    <div><h2>Interaction Performance</h2><span class="panel__subtext">Rolling last 100 conversation turns</span></div>
+                    <span class="panel__badge" data-ui="telemetry-window">0 TURNS</span>
+                </div>
+                <div class="telemetry-matrix">
+                    <div><span>LLM avg</span><strong data-ui="perf-tps">—</strong><small>TOK/S</small></div>
+                    <div><span>TTFT avg</span><strong data-ui="perf-ttft">—</strong><small>MS</small></div>
+                    <div><span>Turn avg</span><strong data-ui="perf-turn">—</strong><small>MS</small></div>
+                    <div><span>Output avg</span><strong data-ui="perf-tokens">—</strong><small>TOK</small></div>
+                    <div><span>RAG hit</span><strong data-ui="perf-rag-hit">—</strong><small>WHEN USED</small></div>
+                    <div><span>Deep</span><strong data-ui="perf-deep">—</strong><small>OF TURNS</small></div>
+                    <div><span>Vision</span><strong data-ui="perf-vision">—</strong><small>OF TURNS</small></div>
+                    <div><span>STT RTF</span><strong data-ui="perf-stt-rtf">—</strong><small>EVAL</small></div>
+                </div>
+                <div class="telemetry-latest mono">
+                    <span data-ui="perf-last-mode">MODE // —</span>
+                    <span data-ui="perf-last-lang">LANG // —</span>
+                    <span data-ui="perf-last-rag">RAG // —</span>
+                    <span data-ui="perf-last-finish">FINISH // —</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel-grid panel-grid--2 circuit-reactive dashboard-section-gap" data-circuit-reactive>
+            <article class="panel panel--compact vision-panel">
+                <div class="panel__header vision-panel__header panel__header--compact">
+                    <div><h2>Vision</h2><span class="panel__subtext" data-ui="vision-meta">Pi-owned cameras / on-demand snapshots</span></div>
+                    <div class="vision-toolbar" aria-label="Camera view controls">
+                        <div class="segmented-control segmented-control--cameras" data-camera-selector aria-label="Camera selection" role="group"></div>
+                        <div class="segmented-control segmented-control--view" data-view-selector aria-label="Frame processing view" role="group">
+                            <button type="button" data-frame-view="processed" class="is-active">Processed</button>
+                            <button type="button" data-frame-view="raw">Raw</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="vision-frame vision-frame--compact">
+                    <img data-vision-image alt="Latest robot camera snapshot" decoding="async" draggable="false" hidden>
+                    <div class="vision-frame__empty" data-vision-empty><span class="vision-frame__glyph">◎</span><strong>Waiting for camera frames</strong><small>Snapshots poll only while this view is open.</small></div>
+                    <div class="vision-frame__footer mono"><span data-ui="camera-label">CAMERA // —</span><span data-ui="frame-age">AGE // —</span></div>
+                </div>
+            </article>
+
+            <article class="panel panel--compact">
+                <div class="panel__header panel__header--compact"><div><h2>Control Nodes</h2><span class="panel__subtext">CCB / RCB topology</span></div><span class="panel__badge" data-ui="node-summary">UNVERIFIED</span></div>
+                <div class="robot-node-map robot-node-map--compact" aria-label="Robot control node status map">
+                    <div class="robot-node-map__center mono">INMOOV<br>NODE MAP</div>
+                    <div class="node-marker node-marker--ccb" data-node-marker="ccb_supervisor"><span></span>CCB</div>
+                    <div class="node-marker node-marker--head" data-node-marker="head"><span></span>HEAD</div>
+                    <div class="node-marker node-marker--left-arm" data-node-marker="left_arm"><span></span>L ARM</div>
+                    <div class="node-marker node-marker--right-arm" data-node-marker="right_arm"><span></span>R ARM</div>
+                    <div class="node-marker node-marker--torso" data-node-marker="torso"><span></span>TORSO</div>
+                    <div class="node-marker node-marker--left-hand" data-node-marker="left_hand"><span></span>L HAND</div>
+                    <div class="node-marker node-marker--right-hand" data-node-marker="right_hand"><span></span>R HAND</div>
+                </div>
+                <div class="node-status-list node-status-list--compact" data-node-list></div>
+            </article>
+        </section>
+
+        <section class="panel-grid panel-grid--2 circuit-reactive dashboard-section-gap" data-circuit-reactive data-aux-dashboard>
+            <article class="panel panel--compact voice-panel">
+                <div class="panel__header panel__header--compact"><div><h2>Voice</h2><span class="panel__subtext">Multilingual TTS set + preview</span></div><span class="panel__badge" data-ui="tts-status">WAITING</span></div>
+                <div class="voice-controls voice-controls--compact">
+                    <label class="voice-field"><span>Voice set</span><select data-voice-set-select aria-label="Multilingual synthesized voice set"><option value="">Waiting for auxiliary service…</option></select><small class="mono voice-feedback" data-ui="voice-set-coverage">COVERAGE // —</small></label>
+                    <label class="voice-field"><span>Preview</span><textarea data-voice-sample maxlength="500" rows="2">Hello. This is TALUS.</textarea></label>
+                    <div class="voice-actions"><button type="button" class="button button--ghost" data-voice-preview>Listen</button><span class="mono voice-feedback" data-ui="voice-feedback">READY // —</span></div>
+                    <audio data-voice-audio preload="none"></audio>
+                </div>
+            </article>
+
+            <article class="panel panel--compact">
+                <div class="panel__header panel__header--compact"><div><h2>Aux Runtime</h2><span class="panel__subtext">Offline cognition / speech / vision</span></div><span class="panel__badge" data-ui="aux-runtime-badge">OFFLINE</span></div>
+                <div class="status-list status-list--dense status-list--columns">
+                    <div><span>LLM / VLM</span><strong class="mono" data-ui="aux-llm">—</strong></div>
+                    <div><span>STT</span><strong class="mono" data-ui="aux-stt">—</strong></div>
+                    <div><span>TTS</span><strong class="mono" data-ui="aux-tts">—</strong></div>
+                    <div><span>YOLO</span><strong class="mono" data-ui="aux-vision">—</strong></div>
+                    <div><span>Pi link</span><strong class="mono" data-ui="aux-pi-link">—</strong></div>
+                    <div><span>Conversation</span><strong class="mono" data-ui="aux-conversation">—</strong></div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+{% endblock %}

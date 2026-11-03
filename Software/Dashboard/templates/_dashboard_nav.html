@@ -1,0 +1,17 @@
+<aside class="dashboard-nav" aria-label="Dashboard navigation" data-dashboard-nav>
+    <div class="dashboard-nav__section">
+        <span class="dashboard-nav__label">Workspace</span>
+        <a class="{% if page_name == 'dashboard' %}is-active{% endif %}" href="{{ url_for('dashboard') }}"><span>Overview</span><span class="mono">01</span></a>
+        <a class="{% if page_name == 'robot' %}is-active{% endif %}" href="{{ url_for('robot') }}"><span>Robot</span><span class="mono">02</span></a>
+    </div>
+
+    <div class="dashboard-nav__section">
+        <span class="dashboard-nav__label">System</span>
+        <a class="{% if page_name == 'help' %}is-active{% endif %}" href="{{ url_for('help_page') }}"><span>Help</span><span class="mono">03</span></a>
+    </div>
+
+    <div class="dashboard-nav__status">
+        <span class="status-dot status-dot--unknown" data-ui="sidebar-dot"></span>
+        <span><strong data-ui="sidebar-status">Control plane waiting</strong><small data-ui="sidebar-detail">Pi state API</small></span>
+    </div>
+</aside>

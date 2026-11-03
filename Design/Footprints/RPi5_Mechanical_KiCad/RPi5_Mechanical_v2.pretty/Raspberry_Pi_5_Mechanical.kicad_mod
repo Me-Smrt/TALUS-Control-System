@@ -1,0 +1,451 @@
+(footprint "Raspberry_Pi_5_Mechanical"
+  (version 20240108)
+  (generator "pcbnew")
+  (generator_version "8.0")
+  (layer "F.Cu")
+  (descr "Raspberry Pi 5 mechanical reference. Origin is GPIO header Pin 1 center. Based on official Raspberry Pi 5 mechanical drawing and 40-pin HAT geometry. Includes four 2.7mm NPTH M2.5 mounting holes and an attached official Raspberry Pi 5 STEP model reference. Place/flip on the CCB side facing the Pi.")
+  (tags "Raspberry Pi 5 RPi5 mechanical 85x56 M2.5 GPIO")
+  (property "Reference" "REF**"
+    (at 34.13 23.23 0)
+    (layer "F.SilkS")
+    (effects (font (size 1.2 1.2) (thickness 0.18)))
+  )
+  (property "Value" "Raspberry_Pi_5_Mechanical"
+    (at 34.13 25.23 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Footprint" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Datasheet" "https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-mechanical-drawing.pdf"
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Description" "Mechanical-only Raspberry Pi 5 reference; 85x56mm nominal board, 58x49mm mounting-hole spacing, 2.7mm mounting holes."
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (attr through_hole board_only exclude_from_pos_files exclude_from_bom)
+
+  ; Nominal Pi PCB outline, origin = GPIO pin 1 center.
+  ; Board edges relative to pin 1: X -8.37..76.63, Y -4.77..51.23.
+  (fp_rect
+    (start -8.37 -4.77)
+    (end 76.63 51.23)
+    (stroke (width 0.25) (type default))
+    (fill none)
+    (layer "F.SilkS")
+  )
+  (fp_rect
+    (start -8.37 -4.77)
+    (end 76.63 51.23)
+    (stroke (width 0.12) (type default))
+    (fill none)
+    (layer "F.Fab")
+  )
+
+  ; Full Pi body reference envelope. User.1 is intentionally used instead of a courtyard
+  ; so the required GPIO socket does not create a permanent courtyard-overlap DRC error.
+  (fp_rect
+    (start -8.87 -5.27)
+    (end 77.13 51.73)
+    (stroke (width 0.15) (type dash))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_text user "PI-FACING-SIDE COMPONENT KEEPOUT REFERENCE"
+    (at 34.13 31.0 0)
+    (layer "User.1")
+    (effects (font (size 0.9 0.9) (thickness 0.14)))
+  )
+
+  ; GPIO header mechanical reference (2x20, 2.54mm pitch).
+  ; Physical Pi pin 1 is the footprint origin. Odd pins run +X; even pins are
+  ; 2.54 mm toward the nearby board edge (-Y in this top-view reference).
+  (fp_rect
+    (start -1.27 -3.81)
+    (end 49.53 1.27)
+    (stroke (width 0.15) (type default))
+    (fill none)
+    (layer "F.Fab")
+  )
+
+  ; GPIO pin-center reference grid on User.1 (mechanical only; no copper pads).
+  (fp_circle
+    (center 0.00 0.00)
+    (end 0.45 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 0.00 -2.54)
+    (end 0.45 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 2.54 0.00)
+    (end 2.99 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 2.54 -2.54)
+    (end 2.99 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 5.08 0.00)
+    (end 5.53 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 5.08 -2.54)
+    (end 5.53 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 7.62 0.00)
+    (end 8.07 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 7.62 -2.54)
+    (end 8.07 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 10.16 0.00)
+    (end 10.61 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 10.16 -2.54)
+    (end 10.61 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 12.70 0.00)
+    (end 13.15 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 12.70 -2.54)
+    (end 13.15 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 15.24 0.00)
+    (end 15.69 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 15.24 -2.54)
+    (end 15.69 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 17.78 0.00)
+    (end 18.23 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 17.78 -2.54)
+    (end 18.23 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 20.32 0.00)
+    (end 20.77 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 20.32 -2.54)
+    (end 20.77 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 22.86 0.00)
+    (end 23.31 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 22.86 -2.54)
+    (end 23.31 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 25.40 0.00)
+    (end 25.85 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 25.40 -2.54)
+    (end 25.85 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 27.94 0.00)
+    (end 28.39 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 27.94 -2.54)
+    (end 28.39 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 30.48 0.00)
+    (end 30.93 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 30.48 -2.54)
+    (end 30.93 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 33.02 0.00)
+    (end 33.47 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 33.02 -2.54)
+    (end 33.47 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 35.56 0.00)
+    (end 36.01 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 35.56 -2.54)
+    (end 36.01 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 38.10 0.00)
+    (end 38.55 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 38.10 -2.54)
+    (end 38.55 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 40.64 0.00)
+    (end 41.09 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 40.64 -2.54)
+    (end 41.09 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 43.18 0.00)
+    (end 43.63 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 43.18 -2.54)
+    (end 43.63 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 45.72 0.00)
+    (end 46.17 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 45.72 -2.54)
+    (end 46.17 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 48.26 0.00)
+    (end 48.71 0.00)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_circle
+    (center 48.26 -2.54)
+    (end 48.71 -2.54)
+    (stroke (width 0.10) (type default))
+    (fill none)
+    (layer "User.1")
+  )
+  (fp_text user "P1"
+    (at 0.0 1.9 0)
+    (layer "User.1")
+    (effects (font (size 0.65 0.65) (thickness 0.10)))
+  )
+  (fp_text user "P2"
+    (at 0.0 -4.35 0)
+    (layer "User.1")
+    (effects (font (size 0.65 0.65) (thickness 0.10)))
+  )
+
+  ; Pin-1 origin marker.
+  (fp_circle
+    (center 0 0)
+    (end 1.0 0)
+    (stroke (width 0.2) (type default))
+    (fill none)
+    (layer "F.SilkS")
+  )
+  (fp_text user "GPIO PIN 1 / FOOTPRINT ORIGIN"
+    (at 6.0 -2.4 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12)) (justify left))
+  )
+
+  ; Mechanical-reference labels for connector-access planning.
+  (fp_text user "USB / ETHERNET EDGE"
+    (at 72.5 23.2 90)
+    (layer "F.SilkS")
+    (effects (font (size 0.9 0.9) (thickness 0.14)))
+  )
+  (fp_text user "USB-C"
+    (at 2.83 48.5 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (fp_text user "HDMI0"
+    (at 17.43 48.5 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (fp_text user "HDMI1"
+    (at 30.83 48.5 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (fp_text user "Pi 5 BODY / KEEP CLEAR ON FACING SIDE"
+    (at 34.13 28.0 0)
+    (layer "F.Fab")
+    (effects (font (size 1.0 1.0) (thickness 0.15)))
+  )
+
+  ; Official nominal mounting-hole centers: 58mm x 49mm spacing, 3.5mm from left/top edges.
+  ; Hole diameter 2.7mm, suitable for M2.5 hardware.
+  (pad "" np_thru_hole circle
+    (at -4.87 -1.27)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+  )
+  (pad "" np_thru_hole circle
+    (at 53.13 -1.27)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+  )
+  (pad "" np_thru_hole circle
+    (at -4.87 47.73)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+  )
+  (pad "" np_thru_hole circle
+    (at 53.13 47.73)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+  )
+
+  ; Official Raspberry Pi 5 STEP model (with graphics).
+  ; STEP uses a conventional Y-up coordinate system; the footprint uses KiCad Y-down.
+  ; Official board geometry places GPIO pin 1 at X=8.37 mm from the left edge and
+  ; 4.77 mm from the top edge (Y=51.23 mm from the lower edge in STEP coordinates).
+  (model "${KIPRJMOD}/rpi-5b_with_graphics.step"
+    (offset (xyz -8.37 -51.23 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
+)

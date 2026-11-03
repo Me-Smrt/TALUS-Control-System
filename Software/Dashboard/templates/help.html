@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Help | ARC Robotics{% endblock %}
+
+{% block header_actions %}
+{% if current_user.is_authenticated %}
+    {% include "_operator_actions.html" %}
+{% else %}
+<a class="button button--ghost" href="{{ url_for('splash') }}">Project Home</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="section section--narrow circuit-reactive" data-circuit-reactive>
+    <p class="eyebrow">DOCUMENTATION / SUPPORT</p>
+    <h1>Help</h1>
+    <p class="section-lead">The dashboard is a local presentation layer. Robot safety and actuator authority remain in the Pi hardware-control process, CCB Supervisor, and RCB firmware.</p>
+
+    <div class="docs-grid">
+        <div class="docs-card"><span class="mono">STATE</span><h2>Robot state</h2><p>System, safety, node, perception, camera, audio, motion, and auxiliary-link health are read from the Pi control-plane API.</p></div>
+        <div class="docs-card"><span class="mono">VISION</span><h2>Camera views</h2><p>Raw and processed views are point-in-time JPEG snapshots. The dashboard does not open a continuous raw stream from the Pi.</p></div>
+        <div class="docs-card"><span class="mono">STATUS</span><h2>Node colors</h2><p>Green means the Pi reports healthy. Red means an explicit fault/offline state. Amber/gray means unknown, unconfigured, or not yet verified.</p></div>
+        <div class="docs-card"><span class="mono">AUTHORITY</span><h2>Authenticated controls</h2><p>Login protects operator pages, but authentication alone never grants a way around hardware safety. Safety-critical controls will require a separate deliberate command contract.</p></div>
+    </div>
+</section>
+{% endblock %}

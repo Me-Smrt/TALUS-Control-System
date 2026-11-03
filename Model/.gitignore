@@ -1,0 +1,8 @@
+# Ignore all output of the build process
+__pycache__/
+*.pyc
+*.pyd
+
+_inmoov_cache/
+
+Inmoov*

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Settings | ARC Robotics{% endblock %}
+
+{% block header_actions %}
+{% include "_operator_actions.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-shell" data-robot-dashboard>
+    {% include "_dashboard_nav.html" %}
+
+    <div class="dashboard-main">
+        <section class="dashboard-title circuit-reactive" data-circuit-reactive>
+            <div>
+                <p class="eyebrow">CONFIGURATION</p>
+                <h1>Settings</h1>
+                <p>Authenticated system configuration surface. Safety-critical writes remain intentionally unavailable during R&D.</p>
+            </div>
+        </section>
+
+        <section class="settings-grid circuit-reactive" data-circuit-reactive>
+            <article class="settings-card">
+                <span class="settings-card__kicker mono">PERCEPTION</span>
+                <h2>Camera ownership</h2>
+                <p>The Raspberry Pi owns both camera devices. The auxiliary node requests individual frames rather than receiving a continuous raw stream.</p>
+                <div class="settings-readout mono" data-ui="camera-count">CAMERAS // —</div>
+            </article>
+            <article class="settings-card">
+                <span class="settings-card__kicker mono">AUXILIARY</span>
+                <h2>AI processor link</h2>
+                <p>Planned Jetson Orin Nano-class node over Ethernet for object/scene models, local AI, STT, and TTS.</p>
+                <div class="settings-readout mono" data-ui="aux-link">STATUS // —</div>
+            </article>
+            <article class="settings-card">
+                <span class="settings-card__kicker mono">SAFETY</span>
+                <h2>Hardware controls</h2>
+                <p>The dashboard does not bypass CCB/RCB safety logic. Arm, power, and service controls will only appear after authenticated command APIs are deliberately designed.</p>
+                <button class="button button--ghost" type="button" disabled>Controls locked in R&D</button>
+            </article>
+        </section>
+    </div>
+</div>
+{% endblock %}
